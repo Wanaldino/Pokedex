@@ -13,7 +13,7 @@ struct PokedexApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+			PokedexList(pokemons: [])
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }

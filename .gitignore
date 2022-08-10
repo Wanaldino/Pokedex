@@ -1,0 +1,12 @@
+.DS_Store
+.idea
+DerivedData
+Pods
+*.xcworkspace
+xcuserdata
+build
+docs
+*.log
+Pods/
+Podfile.lock
+*.orig
