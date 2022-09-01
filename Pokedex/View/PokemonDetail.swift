@@ -15,6 +15,7 @@ struct PokemonDetail: View {
     var body: some View {
 		ZStack {
 			TypeBackground(type: currentPokemon.types.first!)
+
 			VStack {
 				HStack {
 					Text(currentPokemon.name.capitalized)
@@ -52,6 +53,7 @@ struct PokemonDetail: View {
 			.foregroundColor(Color.white)
 			.padding(.all, 16)
 		}
+		.animation(Animation.easeIn, value: currentPokemon)
     }
 }
 

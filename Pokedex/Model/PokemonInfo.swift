@@ -82,25 +82,37 @@ extension PokemonInfo: Hashable {
 extension PokemonInfo {
 	static let mocks = [
 		PokemonInfo(
+			id: 1,
+			name: "bulbasaur",
+			sprite: URL(string: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png")!,
+			types: [PokemonType(
+				id: 12,
+				name: "grass"
+			), PokemonType(
+				id: 4,
+				name: "poison"
+			)]
+		),
+		PokemonInfo(
+			id: 4,
+			name: "charmander",
+			sprite: URL(string: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/4.png")!,
+			types: [PokemonType(
+				id: 10,
+				name: "fire"
+			)]
+		),
+		PokemonInfo(
+			id: 7,
+			name: "squirtle",
+			sprite: URL(string: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/7.png")!,
+			types: [PokemonType(
+				id: 11,
+				name: "water"
+			)]
+		),
+		PokemonInfo(
 			id: 25,
-			name: "pikachu",
-			sprite: URL(string: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png")!,
-			types: [.mock]
-		),
-		PokemonInfo(
-			id: 26,
-			name: "pikachu",
-			sprite: URL(string: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png")!,
-			types: [.mock]
-		),
-		PokemonInfo(
-			id: 27,
-			name: "pikachu",
-			sprite: URL(string: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png")!,
-			types: [.mock]
-		),
-		PokemonInfo(
-			id: 28,
 			name: "pikachu",
 			sprite: URL(string: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png")!,
 			types: [.mock]
