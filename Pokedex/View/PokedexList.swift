@@ -47,6 +47,7 @@ struct PokedexList: View {
 				}
 			}
 		})
+		.navigationTitle("Pokedex")
     }
 }
 
