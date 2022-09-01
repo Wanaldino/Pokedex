@@ -9,6 +9,7 @@ import SwiftUI
 
 struct PokemonDetail: View {
 	let pokemons: [PokemonInfo]
+
 	@State var currentPokemon: PokemonInfo
 
     var body: some View {
@@ -32,7 +33,7 @@ struct PokemonDetail: View {
 				}
 
 				GeometryReader { proxy in
-					TabView {
+					TabView(selection: $currentPokemon) {
 						ForEach(pokemons) { pokemon in
 							AsyncImage(url: pokemon.sprite) { image in
 								image.resizable()
@@ -40,9 +41,10 @@ struct PokemonDetail: View {
 									.frame(width: proxy.size.width, height: proxy.size.height)
 							} placeholder: {
 								EmptyView()
-							}
+							}.tag(pokemon)
 						}
-					}.tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
+					}
+					.tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
 				}
 
 				Spacer()

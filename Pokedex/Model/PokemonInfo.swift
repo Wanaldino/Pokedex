@@ -69,6 +69,15 @@ struct PokemonInfo: Decodable {
 }
 
 extension PokemonInfo: Identifiable {}
+extension PokemonInfo: Hashable {
+	static func == (lhs: PokemonInfo, rhs: PokemonInfo) -> Bool {
+		lhs.id == rhs.id
+	}
+
+	func hash(into hasher: inout Hasher) {
+		hasher.combine(id)
+	}
+}
 
 extension PokemonInfo {
 	static let mocks = [

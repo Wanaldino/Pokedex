@@ -37,5 +37,6 @@ struct TypeBackground: View {
 struct TypeBackground_Previews: PreviewProvider {
     static var previews: some View {
 		TypeBackground(type: .mock)
+		TypeBackground(type: .init(id: 0, name: "fire"))
     }
 }
