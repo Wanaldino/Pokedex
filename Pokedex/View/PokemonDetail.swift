@@ -57,12 +57,6 @@ struct PokemonDetail: View {
 		.animation(Animation.easeIn, value: currentPokemon)
 		.navigationBarTitleDisplayMode(.inline)
 		.navigationBarBackButtonHidden(true)
-		.toolbar {
-			ToolbarItem(placement: .navigationBarLeading) {
-				Image(systemName: "chevron.left")
-					.foregroundColor(.white)
-			}
-		}
     }
 }
 
