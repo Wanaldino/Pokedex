@@ -36,7 +36,8 @@ class HTTPClient {
 //				try! data.write(to: url!)
 			})
 			.serializingDecodable(Response<T.Response>.self)
-			.value.data
+			.value
+			.data
 	}
 }
 

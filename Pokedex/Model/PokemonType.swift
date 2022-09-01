@@ -20,3 +20,5 @@ struct PokemonType: Decodable {
 		_Type(rawValue: name)
 	}
 }
+
+extension PokemonType: Identifiable {}

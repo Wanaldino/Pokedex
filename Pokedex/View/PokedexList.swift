@@ -9,20 +9,32 @@ import SwiftUI
 
 struct PokedexList: View {
 	@State var pokemons: [PokemonInfo]
+	@State private var contentSize: CGSize = .zero
+
+	let padding = 16.0
+	func columns(for width: CGFloat) -> [GridItem] {
+		let column = GridItem(.flexible())
+		var numberOfColumns: Int
+		let columnWidth = width / 2 - padding * 2
+		if columnWidth < 200 {
+			numberOfColumns = 1
+		} else {
+			numberOfColumns = 2
+		}
+		return Array(repeating: column, count: numberOfColumns)
+	}
 
     var body: some View {
 		GeometryReader { proxy in
 			ScrollView {
-				let column = GridItem(.flexible())
-				let columns = Array(repeating: column, count: 2)
-
-				LazyVGrid(columns: columns, alignment: .leading, spacing: 8, content: {
+				let columns = columns(for: proxy.size.width)
+				LazyVGrid(columns: columns, alignment: .leading, content: {
 					ForEach(pokemons) { pokemon in
 						PokedexItemList(pokemon: pokemon)
+							.frame(height: 200)
 					}
 				})
-				.padding(.all, 16)
-				.background(Color.blue)
+				.padding(.all, padding)
 			}
 		}
 		.onAppear(perform: {
@@ -41,5 +53,9 @@ struct PokedexList: View {
 struct PokedexList_Previews: PreviewProvider {
     static var previews: some View {
 		PokedexList(pokemons: PokemonInfo.mocks)
+
+		PokedexList(pokemons: PokemonInfo.mocks)
+			.previewDevice("iPad Air (5th generation)")
+			.previewLayout(.device)
     }
 }

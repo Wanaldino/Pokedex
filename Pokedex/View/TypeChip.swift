@@ -10,7 +10,7 @@ import SwiftUI
 struct TypeChip: View {
 	let type: PokemonType
     var body: some View {
-		Text(type.name)
+		Text(type.name.capitalized)
 			.padding(.horizontal, 10)
 			.padding(.vertical, 4)
 			.background(

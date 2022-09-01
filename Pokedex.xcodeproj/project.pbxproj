@@ -29,6 +29,10 @@
 		F0C3283F28A2C8360061E695 /* TypeChip.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C3283E28A2C8360061E695 /* TypeChip.swift */; };
 		F0C3284128A2E0850061E695 /* PokedexList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C3284028A2E0850061E695 /* PokedexList.swift */; };
 		F0C3284428A2E1410061E695 /* Pokedex.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C3284328A2E1410061E695 /* Pokedex.swift */; };
+		F0CB071E28A4FE0600126A07 /* PokemonDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CB071D28A4FE0600126A07 /* PokemonDetail.swift */; };
+		F0CB071F28A4FE0600126A07 /* PokemonDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CB071D28A4FE0600126A07 /* PokemonDetail.swift */; };
+		F0CB072128A51E1400126A07 /* PokemonBasicDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CB072028A51E1400126A07 /* PokemonBasicDetail.swift */; };
+		F0CB072228A51E1400126A07 /* PokemonBasicDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CB072028A51E1400126A07 /* PokemonBasicDetail.swift */; };
 		F0EA6F8028A3FDA300903022 /* PokedexApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F054740D28A249F100818FDB /* PokedexApp.swift */; };
 		F0EA6F8128A3FDA300903022 /* PokemonInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C3283028A2ADE80061E695 /* PokemonInfo.swift */; };
 		F0EA6F8228A3FDA300903022 /* Pokedex.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F054741128A249F100818FDB /* Pokedex.xcdatamodeld */; };
@@ -73,6 +77,8 @@
 		F0C3283E28A2C8360061E695 /* TypeChip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeChip.swift; sourceTree = "<group>"; };
 		F0C3284028A2E0850061E695 /* PokedexList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokedexList.swift; sourceTree = "<group>"; };
 		F0C3284328A2E1410061E695 /* Pokedex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokedex.swift; sourceTree = "<group>"; };
+		F0CB071D28A4FE0600126A07 /* PokemonDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonDetail.swift; sourceTree = "<group>"; };
+		F0CB072028A51E1400126A07 /* PokemonBasicDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonBasicDetail.swift; sourceTree = "<group>"; };
 		F0EA6F9A28A3FDA300903022 /* PokedexPRO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokedexPRO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -147,6 +153,8 @@
 				F054742228A24A9000818FDB /* PokedexItemList.swift */,
 				F0C3283C28A2C3E10061E695 /* TypeBackground.swift */,
 				F0C3283E28A2C8360061E695 /* TypeChip.swift */,
+				F0CB071D28A4FE0600126A07 /* PokemonDetail.swift */,
+				F0CB072028A51E1400126A07 /* PokemonBasicDetail.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -326,10 +334,12 @@
 				F0C3283328A2AE990061E695 /* PokemonType.swift in Sources */,
 				F0C3284428A2E1410061E695 /* Pokedex.swift in Sources */,
 				F0C3284128A2E0850061E695 /* PokedexList.swift in Sources */,
+				F0CB071E28A4FE0600126A07 /* PokemonDetail.swift in Sources */,
 				F054741528A249F100818FDB /* ContentView.swift in Sources */,
 				F0C3283F28A2C8360061E695 /* TypeChip.swift in Sources */,
 				F0C3282D28A280F90061E695 /* HTTPClient.swift in Sources */,
 				F054741028A249F100818FDB /* Persistence.swift in Sources */,
+				F0CB072128A51E1400126A07 /* PokemonBasicDetail.swift in Sources */,
 				F0C3282828A2804C0061E695 /* PokemonList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -348,10 +358,12 @@
 				F0EA6F8728A3FDA300903022 /* PokemonType.swift in Sources */,
 				F0EA6F8828A3FDA300903022 /* Pokedex.swift in Sources */,
 				F0EA6F8928A3FDA300903022 /* PokedexList.swift in Sources */,
+				F0CB071F28A4FE0600126A07 /* PokemonDetail.swift in Sources */,
 				F0EA6F8A28A3FDA300903022 /* ContentView.swift in Sources */,
 				F0EA6F8B28A3FDA300903022 /* TypeChip.swift in Sources */,
 				F0EA6F8C28A3FDA300903022 /* HTTPClient.swift in Sources */,
 				F0EA6F8D28A3FDA300903022 /* Persistence.swift in Sources */,
+				F0CB072228A51E1400126A07 /* PokemonBasicDetail.swift in Sources */,
 				F0EA6F8F28A3FDA300903022 /* PokemonList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
