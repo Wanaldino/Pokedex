@@ -13,8 +13,16 @@ struct PokedexApp: App {
 
     var body: some Scene {
         WindowGroup {
-			PokedexList(pokemons: [])
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+			NavigationStack {
+				PokedexList(pokemons: [])
+					.navigationDestination(for: Screen.self, destination: { screen in
+						switch screen {
+						case let .detail(pokemons, pokemon):
+							PokemonDetail(pokemons: pokemons, currentPokemon: pokemon)
+						}
+					})
+			}
+			.environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
 }

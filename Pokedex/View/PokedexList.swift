@@ -30,8 +30,10 @@ struct PokedexList: View {
 				let columns = columns(for: proxy.size.width)
 				LazyVGrid(columns: columns, alignment: .leading, content: {
 					ForEach(pokemons) { pokemon in
-						PokedexItemList(pokemon: pokemon)
-							.frame(height: 200)
+						NavigationLink(value: Screen.detail(pokemons, pokemon)) {
+							PokedexItemList(pokemon: pokemon)
+								.frame(height: 200)
+						}
 					}
 				})
 				.padding(.all, padding)
@@ -48,6 +50,12 @@ struct PokedexList: View {
 			}
 		})
 		.navigationTitle("Pokedex")
+		.navigationDestination(for: Screen.self, destination: { screen in
+			switch screen {
+			case let .detail(pokemons, pokemon):
+				PokemonDetail(pokemons: pokemons, currentPokemon: pokemon)
+			}
+		})
     }
 }
 

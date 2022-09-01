@@ -15,6 +15,7 @@ struct PokemonDetail: View {
     var body: some View {
 		ZStack {
 			TypeBackground(type: currentPokemon.types.first!)
+				.ignoresSafeArea(.all)
 
 			VStack {
 				HStack {
@@ -51,9 +52,17 @@ struct PokemonDetail: View {
 				Spacer()
 			}
 			.foregroundColor(Color.white)
-			.padding(.all, 16)
+			.padding(.horizontal, 16)
 		}
 		.animation(Animation.easeIn, value: currentPokemon)
+		.navigationBarTitleDisplayMode(.inline)
+		.navigationBarBackButtonHidden(true)
+		.toolbar {
+			ToolbarItem(placement: .navigationBarLeading) {
+				Image(systemName: "chevron.left")
+					.foregroundColor(.white)
+			}
+		}
     }
 }
 
