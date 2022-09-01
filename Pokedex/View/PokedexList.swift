@@ -39,23 +39,15 @@ struct PokedexList: View {
 				.padding(.all, padding)
 			}
 		}
-		.onAppear(perform: {
-			Task {
-				do {
-					let response = try await HTTPClient().request(query: PokemonList())
-					self.pokemons = response.pokemons
-				} catch (let error) {
-					print(error)
-				}
+		.task({
+			do {
+				let response = try await HTTPClient().request(query: PokemonList())
+				self.pokemons = response.pokemons
+			} catch (let error) {
+				print(error)
 			}
 		})
 		.navigationTitle("Pokedex")
-		.navigationDestination(for: Screen.self, destination: { screen in
-			switch screen {
-			case let .detail(pokemons, pokemon):
-				PokemonDetail(pokemons: pokemons, currentPokemon: pokemon)
-			}
-		})
     }
 }
 
