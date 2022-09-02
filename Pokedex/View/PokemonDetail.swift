@@ -35,18 +35,21 @@ struct PokemonDetail: View {
 				}
 
 				GeometryReader { proxy in
-					TabView(selection: $currentPokemon) {
-						ForEach(pokemons) { pokemon in
-							AsyncImage(url: pokemon.sprite) { image in
-								image.resizable()
-									.aspectRatio(contentMode: .fit)
-									.frame(width: proxy.size.width, height: proxy.size.height)
-							} placeholder: {
-								EmptyView()
-							}.tag(pokemon)
+					ZStack {
+						PokeballView()
+						TabView(selection: $currentPokemon) {
+							ForEach(pokemons) { pokemon in
+								AsyncImage(url: pokemon.sprite) { image in
+									image.resizable()
+										.aspectRatio(contentMode: .fit)
+										.frame(width: proxy.size.width, height: proxy.size.height)
+								} placeholder: {
+									EmptyView()
+								}.tag(pokemon)
+							}
 						}
+						.tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
 					}
-					.tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
 				}
 
 				Spacer()
