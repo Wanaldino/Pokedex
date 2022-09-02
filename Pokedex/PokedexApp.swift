@@ -20,15 +20,7 @@ struct PokedexApp: App {
 						switch screen {
 						case let .detail(pokemons, pokemon):
 							PokemonDetail(pokemons: pokemons, currentPokemon: pokemon)
-								.toolbar {
-									ToolbarItem(placement: .navigationBarLeading) {
-										Image(systemName: "chevron.left")
-											.foregroundColor(.white)
-											.onTapGesture {
-												path.removeLast()
-											}
-									}
-								}
+								.backButton(path: $path)
 						}
 					})
 			}
