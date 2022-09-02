@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct PokemonDetail: View {
+	static let padding = 16.0
 	let pokemons: [PokemonInfo]
 
 	@State var currentPokemon: PokemonInfo
@@ -34,28 +35,36 @@ struct PokemonDetail: View {
 					Text("Seed Pokemon")
 				}
 
-				GeometryReader { proxy in
-					ZStack {
-						PokeballView()
-						TabView(selection: $currentPokemon) {
-							ForEach(pokemons) { pokemon in
-								AsyncImage(url: pokemon.sprite) { image in
-									image.resizable()
-										.aspectRatio(contentMode: .fit)
-										.frame(width: proxy.size.width, height: proxy.size.height)
-								} placeholder: {
-									EmptyView()
-								}.tag(pokemon)
+				ZStack {
+					PokeballView()
+					TabView(selection: $currentPokemon) {
+						ForEach(pokemons) { pokemon in
+							AsyncImage(url: pokemon.sprite) { image in
+								image.resizable()
+									.aspectRatio(contentMode: .fit)
+									.overlay(content: {
+										image.resizable()
+											.renderingMode(.template)
+											.foregroundColor(.black)
+											.aspectRatio(contentMode: .fit)
+											.opacity(currentPokemon == pokemon ? 0 : 1)
+									})
+									.scaleEffect(currentPokemon == pokemon ? 1 : 0.5)
+
+							} placeholder: {
+								EmptyView()
 							}
+							.tag(pokemon)
 						}
-						.tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
 					}
+					.tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
+					.padding(.horizontal, -Self.padding)
 				}
 
 				Spacer()
 			}
 			.foregroundColor(Color.white)
-			.padding(.horizontal, 16)
+			.padding(.horizontal, Self.padding)
 		}
 		.animation(Animation.easeIn, value: currentPokemon)
 		.navigationBarTitleDisplayMode(.inline)
