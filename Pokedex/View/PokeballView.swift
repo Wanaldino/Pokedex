@@ -39,7 +39,9 @@ struct PokeballView: View {
 
 				Circle()
 					.frame(width: size * 0.8)
-			}
+			}.frame(
+                width: proxy.size.width
+            )
 			.foregroundColor(.white.opacity(0.6))
 			.rotationEffect(Angle(degrees: isAnimating ? 360 : 0.0))
 			.animation(animation, value: isAnimating)
