@@ -106,7 +106,7 @@
 		F0C3283E28A2C8360061E695 /* TypeChip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeChip.swift; sourceTree = "<group>"; };
 		F0C3284028A2E0850061E695 /* PokedexList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokedexList.swift; sourceTree = "<group>"; };
 		F0C3284328A2E1410061E695 /* Pokedex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokedex.swift; sourceTree = "<group>"; };
-		F0CB071D28A4FE0600126A07 /* PokemonDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonDetail.swift; sourceTree = "<group>"; };
+		F0CB071D28A4FE0600126A07 /* PokemonDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonDetail.swift; sourceTree = "<group>"; usesTabs = 0; };
 		F0CB072028A51E1400126A07 /* PokemonBasicDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonBasicDetail.swift; sourceTree = "<group>"; };
 		F0EA024828C209A900E627BA /* AnnulusShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnulusShape.swift; sourceTree = "<group>"; };
 		F0EA024B28C209DF00E627BA /* CGRect + center.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGRect + center.swift"; sourceTree = "<group>"; };

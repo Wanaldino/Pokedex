@@ -18,7 +18,6 @@ struct PokemonDetail: View {
 	@State private var isGestureActive: Bool = false
 
     @Namespace var animation
-    @State var currentIndex: Int = 0
 
 	func itemSize(in proxy: GeometryProxy) -> CGFloat {
 		proxy.size.width * 0.5
@@ -30,16 +29,21 @@ struct PokemonDetail: View {
 				.ignoresSafeArea(.all)
 
 			VStack {
-				InfoView()
-				ChipsView()
+                VStack {
+                    InfoView()
+                    ChipsView()
 
-				ZStack {
-					PokeballView()
-					PagerView()
-					.padding(.horizontal, -Self.padding)
+                    GeometryReader { proxy in
+                        PagerView()
+                            .background {
+                                PokeballView()
+                                    .aspectRatio(1, contentMode: .fit)
+                                    .frame(width: proxy.size.width * 0.45)
+                            }
+                            .padding(.horizontal, -Self.padding)
+                    }
                 }
-
-				Spacer()
+                .frame(height: UIScreen.main.bounds.height * 0.4)
 
                 VStack {
                     TabsView(currentPokemon: $currentPokemon, animation: animation)
@@ -118,9 +122,7 @@ struct PokemonDetail: View {
     }
 
     private func dragGesture(proxy: GeometryProxy) -> some Gesture {
-        @GestureState var currentPokemon: PokemonInfo
-
-        return DragGesture()
+        DragGesture()
             .onChanged { value in
                 isGestureActive = true
                 offset = value.translation.width + -itemSize(in: proxy) * CGFloat(index)

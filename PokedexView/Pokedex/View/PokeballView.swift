@@ -13,7 +13,8 @@ struct PokeballView: View {
 			Path(
 				CGRect(
 					origin: .zero,
-					size: CGSize(width: rect.width, height: rect.height * 0.45))
+					size: CGSize(width: rect.width, height: rect.height * 0.45)
+				)
 			)
 		}
 	}
@@ -39,13 +40,11 @@ struct PokeballView: View {
 
 				Circle()
 					.frame(width: size * 0.8)
-			}.frame(
-                width: proxy.size.width
-            )
+			}
 			.foregroundColor(.white.opacity(0.6))
 			.rotationEffect(Angle(degrees: isAnimating ? 360 : 0.0))
 			.animation(animation, value: isAnimating)
-			.onAppear { isAnimating = true }
+			.onAppear { DispatchQueue.main.async { isAnimating = true } }
 			.onDisappear { isAnimating = false }
 		}
 	}
