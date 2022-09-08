@@ -95,21 +95,29 @@ struct PokemonDetail: View {
                 LazyHStack(alignment: .center, spacing: 0) {
                     Spacer().frame(width: itemSize(in: proxy) * 0.5)
                     ForEach(pokemons) { pokemon in
-                        AsyncImage(url: pokemon.sprite) { image in
-                            image.resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .overlay(content: {
-                                    image.resizable()
-                                        .renderingMode(.template)
-                                        .foregroundColor(.black)
-                                        .aspectRatio(contentMode: .fit)
-                                        .opacity(currentPokemon == pokemon ? 0 : 1)
-                                })
-                                .frame(width: itemSize(in: proxy))
-                                .scaleEffect(currentPokemon == pokemon ? 1 : 0.5)
-
-                        } placeholder: {
-                            EmptyView()
+                        CacheAsyncImage(url: pokemon.sprite!) { phase in
+                            switch phase {
+                            case .success(let image):
+                                image.resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .overlay(content: {
+                                        image.resizable()
+                                            .renderingMode(.template)
+                                            .foregroundColor(.black)
+                                            .aspectRatio(contentMode: .fit)
+                                            .opacity(currentPokemon == pokemon ? 0 : 1)
+                                    })
+                                    .frame(width: itemSize(in: proxy))
+                                    .scaleEffect(currentPokemon == pokemon ? 1 : 0.5)
+                            case .failure:
+                                EmptyView()
+                            case .empty:
+                                HStack {
+                                    ProgressView().progressViewStyle(CircularProgressViewStyle())
+                                }
+                            @unknown default:
+                                EmptyView()
+                            }
                         }
                     }
                     Spacer().frame(width: itemSize(in: proxy) * 0.5)

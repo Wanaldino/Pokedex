@@ -11,6 +11,7 @@
 		8C0CC87528C72FC5001008B2 /* TabsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0CC87328C72FC5001008B2 /* TabsView.swift */; };
 		8C0CC87728C74B06001008B2 /* View + RoundCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0CC87628C74B06001008B2 /* View + RoundCorners.swift */; };
 		8C0CC87828C74B06001008B2 /* View + RoundCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0CC87628C74B06001008B2 /* View + RoundCorners.swift */; };
+		8CAF69A328CA2815001DE28A /* CacheAsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAF69A228CA2815001DE28A /* CacheAsyncImage.swift */; };
 		F020DB0D28C0E8C60095214B /* Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F020DB0C28C0E8C60095214B /* Screen.swift */; };
 		F020DB0E28C0E8C60095214B /* Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F020DB0C28C0E8C60095214B /* Screen.swift */; };
 		F020DB1128C202920095214B /* View + backButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F020DB1028C202920095214B /* View + backButton.swift */; };
@@ -19,6 +20,7 @@
 		F020DB1528C203270095214B /* PokeballView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F020DB1328C203270095214B /* PokeballView.swift */; };
 		F0254B6B28C9FBAD000CC334 /* PokedexAPI_DEV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0254B6A28C9FBAD000CC334 /* PokedexAPI_DEV.framework */; };
 		F0254B6C28C9FBAD000CC334 /* PokedexAPI_DEV.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F0254B6A28C9FBAD000CC334 /* PokedexAPI_DEV.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F0254B6F28CB2C8D000CC334 /* CacheAsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAF69A228CA2815001DE28A /* CacheAsyncImage.swift */; };
 		F054740E28A249F100818FDB /* PokedexApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F054740D28A249F100818FDB /* PokedexApp.swift */; };
 		F054741028A249F100818FDB /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = F054740F28A249F100818FDB /* Persistence.swift */; };
 		F054741328A249F100818FDB /* Pokedex.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F054741128A249F100818FDB /* Pokedex.xcdatamodeld */; };
@@ -95,6 +97,7 @@
 /* Begin PBXFileReference section */
 		8C0CC87328C72FC5001008B2 /* TabsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabsView.swift; sourceTree = "<group>"; };
 		8C0CC87628C74B06001008B2 /* View + RoundCorners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View + RoundCorners.swift"; sourceTree = "<group>"; };
+		8CAF69A228CA2815001DE28A /* CacheAsyncImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheAsyncImage.swift; sourceTree = "<group>"; };
 		F020DB0C28C0E8C60095214B /* Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen.swift; sourceTree = "<group>"; };
 		F020DB1028C202920095214B /* View + backButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View + backButton.swift"; sourceTree = "<group>"; };
 		F020DB1328C203270095214B /* PokeballView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeballView.swift; sourceTree = "<group>"; };
@@ -148,6 +151,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8CAF69A028CA27FC001DE28A /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				8CAF69A228CA2815001DE28A /* CacheAsyncImage.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		F020DB0B28C0E8AF0095214B /* Screen */ = {
 			isa = PBXGroup;
 			children = (
@@ -205,6 +216,7 @@
 			children = (
 				F0C3281228A25FDE0061E695 /* Resources */,
 				F0C3284228A2E09A0061E695 /* ViewModel */,
+				8CAF69A028CA27FC001DE28A /* Utils */,
 				F054742128A24A0200818FDB /* View */,
 				F020DB0B28C0E8AF0095214B /* Screen */,
 				F020DB0F28C202700095214B /* Extensions */,
@@ -399,6 +411,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F020DB1128C202920095214B /* View + backButton.swift in Sources */,
+				F0254B6F28CB2C8D000CC334 /* CacheAsyncImage.swift in Sources */,
 				F054740E28A249F100818FDB /* PokedexApp.swift in Sources */,
 				F020DB1428C203270095214B /* PokeballView.swift in Sources */,
 				F054741328A249F100818FDB /* Pokedex.xcdatamodeld in Sources */,
@@ -425,6 +438,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F020DB1228C202920095214B /* View + backButton.swift in Sources */,
+				8CAF69A328CA2815001DE28A /* CacheAsyncImage.swift in Sources */,
 				F0EA6F8028A3FDA300903022 /* PokedexApp.swift in Sources */,
 				F020DB1528C203270095214B /* PokeballView.swift in Sources */,
 				F0EA6F8228A3FDA300903022 /* Pokedex.xcdatamodeld in Sources */,

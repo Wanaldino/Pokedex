@@ -41,14 +41,23 @@ struct PokedexItemList: View {
 
                         HStack {
                             Spacer()
-                            AsyncImage(url: pokemon.sprite, content: { image in
-                                image
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                                    .frame(height: proxy.size.height * 0.7)
-                            }, placeholder: {
-                                EmptyView()
-                            })
+                            CacheAsyncImage(url: pokemon.sprite!) { phase in
+                                switch phase {
+                                case .success(let image):
+                                    image
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fit)
+                                        .frame(height: proxy.size.height * 0.7)
+                                case .failure:
+                                    EmptyView()
+                                case .empty:
+                                    HStack {
+                                        ProgressView().progressViewStyle(CircularProgressViewStyle())
+                                    }
+                                @unknown default:
+                                    EmptyView()
+                                }
+                            }
                         }
                         .padding(.bottom, 10)
                         .padding(.trailing, 10)
