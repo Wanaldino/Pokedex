@@ -19,10 +19,13 @@ struct PokeballView: View {
 		}
 	}
 
+    var shouldAnimate: Bool = true
 	@State private var isAnimating = false
 
-	var animation: Animation {
-		Animation.linear(duration: 2.0).repeatForever(autoreverses: false)
+
+	var animation: Animation? {
+        guard shouldAnimate else { return nil }
+		return Animation.linear(duration: 2.0).repeatForever(autoreverses: false)
 	}
 
 	var body: some View {
@@ -41,7 +44,7 @@ struct PokeballView: View {
 				Circle()
 					.frame(width: size * 0.8)
 			}
-			.foregroundColor(.white.opacity(0.6))
+			.foregroundColor(.white.opacity(0.4))
 			.rotationEffect(Angle(degrees: isAnimating ? 360 : 0.0))
 			.animation(animation, value: isAnimating)
 			.onAppear { DispatchQueue.main.async { isAnimating = true } }

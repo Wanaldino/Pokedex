@@ -31,17 +31,28 @@ struct PokedexItemList: View {
 
 				VStack {
 					Spacer()
-					HStack {
-						Spacer()
-						AsyncImage(url: pokemon.sprite, content: { image in
-							image
-								.resizable()
-								.aspectRatio(contentMode: .fit)
-								.frame(height: proxy.size.height * 0.5)
-						}, placeholder: {
-							EmptyView()
-						})
-					}.padding(EdgeInsets(top: 20, leading: 20, bottom: 20, trailing: 20))
+
+                    ZStack(alignment: .bottomTrailing) {
+                        PokeballView(shouldAnimate: false)
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: proxy.size.width * 0.40)
+                            .padding(.bottom, -12)
+                            .padding(.trailing, -12)
+
+                        HStack {
+                            Spacer()
+                            AsyncImage(url: pokemon.sprite, content: { image in
+                                image
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .frame(height: proxy.size.height * 0.7)
+                            }, placeholder: {
+                                EmptyView()
+                            })
+                        }
+                        .padding(.bottom, 10)
+                        .padding(.trailing, 10)
+                    }
 				}
 			}
 			.cornerRadius(20)
