@@ -7,4 +7,7 @@
    <FileRef
       location = "group:PokedexAPI/PokedexAPI.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:PokedexView/Pokedex/Resources/../../../PokedexModel/PokedexModel.xcodeproj">
+   </FileRef>
 </Workspace>

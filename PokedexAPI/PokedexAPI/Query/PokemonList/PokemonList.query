@@ -11,5 +11,21 @@
 		name
 	  }
 	}
+	aditionalInfo: pokemon_v2_pokemonspecy {
+      species: pokemon_v2_pokemonspeciesnames(where: {language_id: {_eq: 9}}) {
+        name: genus
+      }
+      descriptions: pokemon_v2_pokemonspeciesflavortexts(where: {language_id: {_eq: 9}}) {
+        description: flavor_text
+      }
+      eggGroups: pokemon_v2_pokemonegggroups {
+        group: pokemon_v2_egggroup {
+          names: pokemon_v2_egggroupnames(where: {language_id: {_eq: 9}}) {
+            name
+          }
+        }
+      }
+      gender_rate
+    }
   }
 }

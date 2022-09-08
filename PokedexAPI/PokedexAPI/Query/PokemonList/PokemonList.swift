@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import PokedexModel
 
 public struct PokemonList: Query {
 	public typealias Variables = VoidVariables

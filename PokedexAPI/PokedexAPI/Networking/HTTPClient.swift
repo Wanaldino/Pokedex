@@ -19,28 +19,21 @@ public class HTTPClient {
 		let body = Body(query: query.query, variables: query.variables)
 		let headers = HTTPHeaders(["Content-Type" : "application/json", "X-Method-Used": "graphiql"])
 
-		#if DEBUG
-		
-		let data = try! Data(contentsOf: query.mockFile)
-		let value = try! JSONDecoder().decode(Response<T.Response>.self, from: data)
-		return value.data
-		#else
-
 		return try await AF
 			.request(url, method: .post, parameters: body, encoder: .json, headers: headers)
 			.responseString(completionHandler: { response in
-				print("ℹ️", response)
-//				let url = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask).first?.appendingPathComponent(UUID().description)
-//
-//				let object = try! JSONSerialization.jsonObject(with: response.data!, options: [])
-//				let data = try! JSONSerialization.data(withJSONObject: object, options: [.prettyPrinted])
-//
-//				try! data.write(to: url!)
+//				print("ℹ️", response)
+				let url = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask).first?.appendingPathComponent(UUID().description)
+
+				let object = try! JSONSerialization.jsonObject(with: response.data!, options: [])
+				let data = try! JSONSerialization.data(withJSONObject: object, options: [.prettyPrinted])
+
+				try! data.write(to: url!)
+				print(url)
 			})
 			.serializingDecodable(Response<T.Response>.self)
 			.value
 			.data
-		#endif
 	}
 }
 

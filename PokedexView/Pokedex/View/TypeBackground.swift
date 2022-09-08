@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import PokedexAPI
+import PokedexModel
 
 struct TypeBackground: View {
 	let type: PokemonType

@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import PokedexAPI
+import PokedexModel
 
 enum Screen: Hashable {
 	case detail([Pokemon], Pokemon)

@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import PokedexAPI
+import PokedexModel
 
 struct TabItemModel: Identifiable {
     var id: Int

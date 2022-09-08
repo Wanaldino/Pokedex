@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F0EA6F7C28A3FDA300903022"
-               BuildableName = "PokedexPRO.app"
-               BlueprintName = "PokedexPRO"
-               ReferencedContainer = "container:Pokedex.xcodeproj">
+               BlueprintIdentifier = "F0254B3D28C9F960000CC334"
+               BuildableName = "PokedexModel.framework"
+               BlueprintName = "PokedexModel"
+               ReferencedContainer = "container:PokedexModel.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -40,16 +40,6 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F0EA6F7C28A3FDA300903022"
-            BuildableName = "PokedexPRO.app"
-            BlueprintName = "PokedexPRO"
-            ReferencedContainer = "container:Pokedex.xcodeproj">
-         </BuildableReference>
-      </BuildableProductRunnable>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -57,16 +47,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F0EA6F7C28A3FDA300903022"
-            BuildableName = "PokedexPRO.app"
-            BlueprintName = "PokedexPRO"
-            ReferencedContainer = "container:Pokedex.xcodeproj">
+            BlueprintIdentifier = "F0254B3D28C9F960000CC334"
+            BuildableName = "PokedexModel.framework"
+            BlueprintName = "PokedexModel"
+            ReferencedContainer = "container:PokedexModel.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

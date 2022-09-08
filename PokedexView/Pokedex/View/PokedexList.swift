@@ -6,7 +6,12 @@
 //
 
 import SwiftUI
+import PokedexModel
+#if DEBUG
+import PokedexAPI_DEV
+#else
 import PokedexAPI
+#endif
 
 struct PokedexList: View {
 	@State var pokemons: [Pokemon]

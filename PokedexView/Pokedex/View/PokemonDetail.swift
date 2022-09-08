@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import PokedexAPI
+import PokedexModel
 
 struct PokemonDetail: View {
 	static let padding = 16.0

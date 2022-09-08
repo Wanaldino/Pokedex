@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import PokedexAPI
+import PokedexModel
 
 struct PokemonBasicDetail: View {
 	let pokemon: Pokemon
