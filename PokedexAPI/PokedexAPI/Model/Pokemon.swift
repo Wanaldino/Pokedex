@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct PokemonInfo: Decodable, Hashable, Identifiable {
+public struct Pokemon: Decodable, Hashable, Identifiable {
 	struct _Sprite: Decodable {
 		struct Sprite: Decodable {
 			struct Sprite: Decodable {
@@ -67,8 +67,8 @@ public struct PokemonInfo: Decodable, Hashable, Identifiable {
 	}
 }
 
-public extension PokemonInfo { //Hashable
-	static func == (lhs: PokemonInfo, rhs: PokemonInfo) -> Bool {
+public extension Pokemon { //Hashable
+	static func == (lhs: Pokemon, rhs: Pokemon) -> Bool {
 		lhs.id == rhs.id
 	}
 
@@ -77,9 +77,9 @@ public extension PokemonInfo { //Hashable
 	}
 }
 
-public extension PokemonInfo {
+public extension Pokemon {
 	static let mocks = [
-		PokemonInfo(
+		Pokemon(
 			id: 1,
 			name: "bulbasaur",
 			sprite: URL(string: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png")!,
@@ -91,7 +91,7 @@ public extension PokemonInfo {
 				name: "poison"
 			)]
 		),
-		PokemonInfo(
+		Pokemon(
 			id: 4,
 			name: "charmander",
 			sprite: URL(string: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/4.png")!,
@@ -100,7 +100,7 @@ public extension PokemonInfo {
 				name: "fire"
 			)]
 		),
-		PokemonInfo(
+		Pokemon(
 			id: 7,
 			name: "squirtle",
 			sprite: URL(string: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/7.png")!,
@@ -109,7 +109,7 @@ public extension PokemonInfo {
 				name: "water"
 			)]
 		),
-		PokemonInfo(
+		Pokemon(
 			id: 25,
 			name: "pikachu",
 			sprite: URL(string: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png")!,

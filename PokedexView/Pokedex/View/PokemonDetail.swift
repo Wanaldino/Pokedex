@@ -10,9 +10,9 @@ import PokedexAPI
 
 struct PokemonDetail: View {
 	static let padding = 16.0
-	let pokemons: [PokemonInfo]
+	let pokemons: [Pokemon]
 
-	@State var currentPokemon: PokemonInfo
+	@State var currentPokemon: Pokemon
 	var index: Int { pokemons.firstIndex(of: currentPokemon)! }
 	@State private var offset: CGFloat = 0
 	@State private var isGestureActive: Bool = false
@@ -145,8 +145,8 @@ struct PokemonDetail: View {
 
 struct PokemonDetail_Previews: PreviewProvider {
 	static var previews: some View {
-		PokemonDetail(pokemons: PokemonInfo.mocks, currentPokemon: .mock)
-		PokemonDetail(pokemons: PokemonInfo.mocks, currentPokemon: .mock)
+		PokemonDetail(pokemons: Pokemon.mocks, currentPokemon: .mock)
+		PokemonDetail(pokemons: Pokemon.mocks, currentPokemon: .mock)
 			.previewDevice("iPad Air (5th generation)")
 			.previewLayout(.device)
 	}

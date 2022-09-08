@@ -22,7 +22,7 @@ struct TabsView: View {
     @State private var currentIndex: Int = 0
     @State private var currentWidth: CGFloat = .zero
 
-    @Binding var currentPokemon: PokemonInfo
+    @Binding var currentPokemon: Pokemon
     let animation: Namespace.ID
 
     let items: [TabItemModel] = [

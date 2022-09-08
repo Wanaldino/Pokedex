@@ -9,7 +9,7 @@ import SwiftUI
 import PokedexAPI
 
 struct PokedexList: View {
-	@State var pokemons: [PokemonInfo]
+	@State var pokemons: [Pokemon]
 	@State private var contentSize: CGSize = .zero
 
 	let padding = 16.0
@@ -54,9 +54,9 @@ struct PokedexList: View {
 
 struct PokedexList_Previews: PreviewProvider {
     static var previews: some View {
-		PokedexList(pokemons: PokemonInfo.mocks)
+		PokedexList(pokemons: Pokemon.mocks)
 
-		PokedexList(pokemons: PokemonInfo.mocks)
+		PokedexList(pokemons: Pokemon.mocks)
 			.previewDevice("iPad Air (5th generation)")
 			.previewLayout(.device)
     }

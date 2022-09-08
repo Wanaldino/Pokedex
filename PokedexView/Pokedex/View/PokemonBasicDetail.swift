@@ -9,7 +9,7 @@ import SwiftUI
 import PokedexAPI
 
 struct PokemonBasicDetail: View {
-	let pokemon: PokemonInfo
+	let pokemon: Pokemon
 	
     var body: some View {
 		Text(pokemon.name)

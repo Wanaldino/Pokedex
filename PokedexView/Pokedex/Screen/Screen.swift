@@ -9,5 +9,5 @@ import Foundation
 import PokedexAPI
 
 enum Screen: Hashable {
-	case detail([PokemonInfo], PokemonInfo)
+	case detail([Pokemon], Pokemon)
 }

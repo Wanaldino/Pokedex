@@ -11,7 +11,7 @@ public struct PokemonList: Query {
 	public typealias Variables = VoidVariables
 
 	public struct Response: Decodable {
-		public let pokemons: [PokemonInfo]
+		public let pokemons: [Pokemon]
 	}
 
 	public init() {}

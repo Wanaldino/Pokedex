@@ -9,7 +9,7 @@ import SwiftUI
 import PokedexAPI
 
 struct PokedexItemList: View {
-	let pokemon: PokemonInfo
+	let pokemon: Pokemon
 
     var body: some View {
 		GeometryReader { proxy in
