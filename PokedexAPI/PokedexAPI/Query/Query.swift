@@ -36,7 +36,7 @@ extension Query {
 	}
 
 	var queryFile: String {
-		Bundle.main.path(forResource: name, ofType: "query")!
+		(Bundle.allFrameworks + Bundle.allBundles).compactMap({ $0.path(forResource: name, ofType: "query") }).first!
 	}
 
 	public var query: String {
@@ -46,6 +46,6 @@ extension Query {
 	public var variables: Variables? { nil }
 
 	public var mockFile: URL {
-		Bundle.main.url(forResource: name, withExtension: "mock")!
+		(Bundle.allFrameworks + Bundle.allBundles).compactMap({ $0.url(forResource: name, withExtension: "mock") }).first!
 	}
 }
