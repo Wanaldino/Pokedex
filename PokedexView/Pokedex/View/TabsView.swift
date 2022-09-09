@@ -19,18 +19,18 @@ struct TabItemModel: Identifiable {
 }
 
 struct TabsView: View {
-    @State private var currentIndex: Int = 0
+	@State private var currentItem: String = "About"
     @State private var currentWidth: CGFloat = .zero
 
     @Binding var currentPokemon: Pokemon
     let animation: Namespace.ID
 
-    let items: [TabItemModel] = [
-        TabItemModel.init(id: 0, name: "About"),
-        TabItemModel.init(id: 1, name: "Base stats"),
-        TabItemModel.init(id: 2, name: "Evolution"),
-        TabItemModel.init(id: 3, name: "Moves")
-    ]
+	let items = [
+		"About",
+		"Base stats",
+		"Evolution",
+		"Moves"
+	]
 
     var body: some View {
         VStack {
@@ -49,7 +49,7 @@ struct TabsView: View {
                     return .clear
                 }
             }
-            switch(currentIndex) {
+			switch(items.firstIndex(of: currentItem)!) {
             case 0: PokemonBasicDetail(pokemon: currentPokemon)
             case 1: Color.red
             case 2: Color.black
@@ -60,15 +60,15 @@ struct TabsView: View {
     }
 
     @ViewBuilder
-    func tabView(item: TabItemModel) -> some View {
+    func tabView(item: String) -> some View {
         VStack(spacing: 8) {
-            Text(item.name)
+            Text(item)
                 .fontWeight(.semibold)
-                .foregroundColor(currentIndex == item.id ? .black : .gray)
+                .foregroundColor(currentItem == item ? .black : .gray)
                 .lineLimit(1)
 
             ZStack {
-                if currentIndex == item.id {
+                if currentItem == item {
                     RoundedRectangle(cornerRadius: 2,style: .continuous)
                         .fill(.blue)
                         .matchedGeometryEffect(id: "AnimationTab", in: animation)
@@ -82,7 +82,7 @@ struct TabsView: View {
         }
         .contentShape(Rectangle())
         .onTapGesture {
-            withAnimation(.easeInOut) { currentIndex = item.id }
+            withAnimation(.easeInOut) { currentItem = item }
         }
     }
 }
