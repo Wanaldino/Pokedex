@@ -60,21 +60,37 @@ public struct Pokemon: Decodable, Hashable, Identifiable {
 	
 	public let id: Int
 	public let name: String
+	public let height: Int
+	public let weight: Int
 	public let sprite: URL?
 	public let types: [PokemonType]
 	public let aditionalInfo: AditionalInfo
 
+	public var description: String? {
+		aditionalInfo.descriptions
+			.map(\.description)
+			.sorted(by: { $0.description.count > $1.description.count })
+			.first?
+			.replacingOccurrences(of: name.uppercased(), with: name.capitalized)
+			.replacingOccurrences(of: "\n", with: " ")
+//			.replacingOccurrences(of: "  ", with: " ")
+	}
+
 	enum CodingKeys: CodingKey {
 		case id
 		case name
+		case height
+		case weight
 		case sprites
 		case types
 		case aditionalInfo
 	}
 
-	init(id: Int, name: String, sprite: URL? = nil, types: [PokemonType], aditionalInfo: AditionalInfo) {
+	init(id: Int, name: String, height: Int, weight: Int, sprite: URL? = nil, types: [PokemonType], aditionalInfo: AditionalInfo) {
 		self.id = id
 		self.name = name
+		self.height = height
+		self.weight = weight
 		self.sprite = sprite
 		self.types = types
 		self.aditionalInfo = aditionalInfo
@@ -84,6 +100,8 @@ public struct Pokemon: Decodable, Hashable, Identifiable {
 		let container = try decoder.container(keyedBy: CodingKeys.self)
 		self.id = try container.decode(Int.self, forKey: .id)
 		self.name = try container.decode(String.self, forKey: .name)
+		self.height = try container.decode(Int.self, forKey: .height)
+		self.weight = try container.decode(Int.self, forKey: .weight)
 
 		let spritesData = try container.decode([Sprite].self, forKey: .sprites).first!.sprites.data(using: .utf8)!
 		let sprites = try? JSONDecoder().decode(_Sprite.self, from: spritesData)
@@ -108,6 +126,8 @@ public extension Pokemon {
 		Pokemon(
 			id: 1,
 			name: "bulbasaur",
+			height: 7,
+			weight: 69,
 			sprite: URL(string: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png")!,
 			types: [PokemonType(
 				id: 12,
@@ -138,6 +158,8 @@ public extension Pokemon {
 		Pokemon(
 			id: 4,
 			name: "charmander",
+			height: 6,
+			weight: 85,
 			sprite: URL(string: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/4.png")!,
 			types: [PokemonType(
 				id: 10,
@@ -164,6 +186,8 @@ public extension Pokemon {
 		Pokemon(
 			id: 7,
 			name: "squirtle",
+			height: 5,
+			weight: 90,
 			sprite: URL(string: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/7.png")!,
 			types: [PokemonType(
 				id: 11,
@@ -190,6 +214,8 @@ public extension Pokemon {
 		Pokemon(
 			id: 25,
 			name: "pikachu",
+			height: 4,
+			weight: 60,
 			sprite: URL(string: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png")!,
 			types: [.mock],
 			aditionalInfo: Pokemon.AditionalInfo(
