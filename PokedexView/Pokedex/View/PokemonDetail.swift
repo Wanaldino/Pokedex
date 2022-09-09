@@ -110,11 +110,9 @@ struct PokemonDetail: View {
                                     .frame(width: itemSize(in: proxy))
                                     .scaleEffect(currentPokemon == pokemon ? 1 : 0.5)
                             case .failure:
-                                EmptyView()
+                                Spacer().frame(width: itemSize(in: proxy))
                             case .empty:
-                                HStack {
-                                    ProgressView().progressViewStyle(CircularProgressViewStyle())
-                                }
+                                ProgressView().progressViewStyle(CircularProgressViewStyle())
                             @unknown default:
                                 EmptyView()
                             }

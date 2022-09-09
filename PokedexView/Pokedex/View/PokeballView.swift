@@ -25,7 +25,7 @@ struct PokeballView: View {
 
 	var animation: Animation? {
         guard shouldAnimate else { return nil }
-		return Animation.linear(duration: 2.0).repeatForever(autoreverses: false)
+		return Animation.linear(duration: 3.5).repeatForever(autoreverses: false)
 	}
 
 	var body: some View {

@@ -51,9 +51,7 @@ struct PokedexItemList: View {
                                 case .failure:
                                     EmptyView()
                                 case .empty:
-                                    HStack {
-                                        ProgressView().progressViewStyle(CircularProgressViewStyle())
-                                    }
+									ProgressView().progressViewStyle(CircularProgressViewStyle())
                                 @unknown default:
                                     EmptyView()
                                 }
