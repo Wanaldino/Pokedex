@@ -2,6 +2,8 @@
   pokemons: pokemon_v2_pokemon(limit: 150) {
 	id
 	name
+	height
+    weight
 	sprites: pokemon_v2_pokemonsprites {
 	  sprites
 	}
