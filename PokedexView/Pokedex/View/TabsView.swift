@@ -20,7 +20,6 @@ struct TabItemModel: Identifiable {
 
 struct TabsView: View {
 	@State private var currentItem: String = "About"
-    @State private var currentWidth: CGFloat = .zero
 
     @Binding var currentPokemon: Pokemon
     let animation: Namespace.ID
@@ -33,30 +32,24 @@ struct TabsView: View {
 	]
 
     var body: some View {
-        VStack {
-            ScrollView(.horizontal, showsIndicators: false) {
-                HStack {
-                    ForEach(items) { item in
-                        tabView(item: item)
-                    }
-                }.frame(width: currentWidth, alignment: .center)
-            }
-            .overlay {
-                GeometryReader { proxy -> Color in
-                    DispatchQueue.main.async {
-                        currentWidth = proxy.size.width
-                    }
-                    return .clear
-                }
-            }
-			switch(items.firstIndex(of: currentItem)!) {
-            case 0: PokemonBasicDetail(pokemon: currentPokemon)
-            case 1: Color.red
-            case 2: Color.black
-            case 3: Color.blue
-            default: EmptyView()
-            }
-        }
+		GeometryReader { proxy in
+			VStack {
+				ScrollView(.horizontal, showsIndicators: false) {
+					HStack {
+						ForEach(items) { item in
+							tabView(item: item)
+						}
+					}.frame(minWidth: proxy.size.width, alignment: .center)
+				}
+				switch(items.firstIndex(of: currentItem)!) {
+				case 0: PokemonBasicDetail(pokemon: currentPokemon)
+				case 1: Color.red
+				case 2: Color.black
+				case 3: Color.blue
+				default: EmptyView()
+				}
+			}
+		}
     }
 
     @ViewBuilder
