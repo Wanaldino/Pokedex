@@ -23,9 +23,9 @@ struct PokemonBasicDetail: View {
 
 				HStack(spacing: 0) {
 					VerticalDescription(title: "Heigth", description: pokemon.height.description)
-						.frame(width: availableWidth / 2, alignment: .leading)
+						.frame(minWidth: availableWidth / 2, alignment: .leading)
 					VerticalDescription(title: "Weight", description: pokemon.weight.description)
-						.frame(width: availableWidth / 2, alignment: .leading)
+						.frame(minWidth: availableWidth / 2, alignment: .leading)
 				}
 				.padding(.horizontal, horizontalPadding)
 				.padding(.vertical, 8)
@@ -46,11 +46,12 @@ struct PokemonBasicDetail: View {
 					Text("1")
 					Text("Egg cycle")
 					Text("1")
-				}.border(.red)
+				}
 
 				Spacer()
 			}
 		}
+		.foregroundColor(.black)
 		.padding(.horizontal, 16)
     }
 
