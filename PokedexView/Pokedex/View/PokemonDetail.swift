@@ -17,6 +17,10 @@ struct PokemonDetail: View {
 	@State private var offset: CGFloat = 0
 	@State private var isGestureActive: Bool = false
 
+    @State private var startOffsetY: CGFloat = UIScreen.main.bounds.height * 0.5
+    @State private var currentDragOffsetY: CGFloat = 0
+    @State private var endDragOffsetY: CGFloat = 0
+
     @Namespace var animation
 
 	func itemSize(in proxy: GeometryProxy) -> CGFloat {
@@ -24,47 +28,64 @@ struct PokemonDetail: View {
 	}
 
 	var body: some View {
-		ZStack {
-			TypeBackground(type: currentPokemon.types.first!)
-				.ignoresSafeArea(.all)
-
-			VStack {
-                VStack {
-                    InfoView()
-                    ChipsView()
-
-                    GeometryReader { proxy in
-                        PagerView()
-                            .background {
-                                PokeballView()
-                                    .aspectRatio(1, contentMode: .fit)
-                                    .frame(width: proxy.size.width * 0.45)
-                            }
-                            .padding(.horizontal, -Self.padding)
+        ZStack {
+            TypeBackground(type: currentPokemon.types.first!)
+                .ignoresSafeArea(.all)
+            GeometryReader { proxy in
+                VStack(spacing: 8) {
+                    VStack {
+                        InfoView()
+                        ChipsView()
                     }
-                }
-                .frame(height: UIScreen.main.bounds.height * 0.4)
+                    .padding()
 
-                VStack {
-                    TabsView(currentPokemon: $currentPokemon, animation: animation)
-                    Spacer()
+                    ZStack {
+                        PokeballView()
+                            .aspectRatio(1, contentMode: .fit)
+                            .frame(width: proxy.size.width * 0.45)
+                            .padding(.top)
+
+                        PagerView()
+                            .frame(height: itemSize(in: proxy))
+                    }
+
                 }
-                .padding(.top, 50)
+            }
+
+            TabsView(currentPokemon: $currentPokemon, animation: animation)
+                .padding()
                 .background {
                     Color.white
                         .cornerRadius(32, corners: [.topRight, .topLeft])
-                        .padding(.horizontal, -Self.padding)
-                        .ignoresSafeArea()
+                        .padding(.horizontal)
                 }
-			}
-			.foregroundColor(Color.white)
-			.padding(.horizontal, Self.padding)
+                .offset(y: startOffsetY)
+                .offset(y: currentDragOffsetY)
+                .offset(y: endDragOffsetY)
+                .padding(.horizontal, -Self.padding)
+                .gesture(DragGesture()
+                    .onChanged { value in
+                        withAnimation(.spring()) {
+                            currentDragOffsetY = value.translation.height
+                        }
+                    }
+                    .onEnded { value in
+                        withAnimation(.spring()) {
+                            if currentDragOffsetY < -150 {
+                                endDragOffsetY = -startOffsetY
+                            } else if endDragOffsetY != 0 && currentDragOffsetY > 150 {
+                                endDragOffsetY = 0
+                            }
+                            currentDragOffsetY = 0
+                        }
+                    }
+                )
+                .ignoresSafeArea(edges: .bottom)
         }
 		.animation(Animation.easeIn, value: currentPokemon)
 		.navigationBarTitleDisplayMode(.inline)
 		.navigationBarBackButtonHidden(true)
     }
-
 
     // MARK: - Private
     @ViewBuilder
@@ -133,7 +154,6 @@ struct PokemonDetail: View {
                 isGestureActive = true
                 offset = value.translation.width + -itemSize(in: proxy) * CGFloat(index)
             }
-
             .onEnded { value in
                 if -value.translation.width > itemSize(in: proxy) / 2, index < pokemons.count - 1 {
                     self.currentPokemon = pokemons[index + 1]

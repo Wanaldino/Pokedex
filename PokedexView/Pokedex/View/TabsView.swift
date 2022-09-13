@@ -38,9 +38,12 @@ struct TabsView: View {
 					HStack {
 						ForEach(items) { item in
 							tabView(item: item)
+                                .padding(.horizontal, 5)
 						}
-					}.frame(minWidth: proxy.size.width, alignment: .center)
-				}
+                    }.padding(.horizontal)
+                    .frame(minWidth: proxy.size.width, alignment: .center)
+                }
+                .padding(.vertical, 16)
 				switch(items.firstIndex(of: currentItem)!) {
 				case 0: PokemonBasicDetail(pokemon: currentPokemon)
 				case 1: Color.red
