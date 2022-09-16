@@ -8,28 +8,18 @@
 import SwiftUI
 import PokedexModel
 
-struct TabItemModel: Identifiable {
-    var id: Int
-    var name: String
-
-    init(id: Int, name: String) {
-        self.id = id
-        self.name = name
-    }
-}
-
 struct TabsView: View {
-	@State private var currentItem: String = "About"
-
     @Binding var currentPokemon: Pokemon
-    let animation: Namespace.ID
 
+	@State private var currentItem: String = "About"
 	let items = [
 		"About",
 		"Base stats",
 		"Evolution",
 		"Moves"
 	]
+
+	@Namespace var animation
 
     var body: some View {
 		GeometryReader { proxy in
@@ -40,17 +30,23 @@ struct TabsView: View {
 							tabView(item: item)
                                 .padding(.horizontal, 5)
 						}
-                    }.padding(.horizontal)
+                    }
+					.padding(.horizontal)
                     .frame(minWidth: proxy.size.width, alignment: .center)
                 }
                 .padding(.vertical, 16)
-				switch(items.firstIndex(of: currentItem)!) {
-				case 0: PokemonBasicDetail(pokemon: currentPokemon)
-				case 1: Color.red
-				case 2: Color.black
-				case 3: Color.blue
-				default: EmptyView()
+
+				TabView(selection: $currentItem) {
+					PokemonBasicDetail(pokemon: currentPokemon)
+						.tag(items[0])
+					Color.red
+						.tag(items[1])
+					Color.black
+						.tag(items[2])
+					Color.blue
+						.tag(items[3])
 				}
+				.tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
 			}
 		}
     }
@@ -63,18 +59,11 @@ struct TabsView: View {
                 .foregroundColor(currentItem == item ? .black : .gray)
                 .lineLimit(1)
 
-            ZStack {
-                if currentItem == item {
-                    RoundedRectangle(cornerRadius: 2,style: .continuous)
-                        .fill(.blue)
-                        .matchedGeometryEffect(id: "AnimationTab", in: animation)
-                } else {
-                    RoundedRectangle(cornerRadius: 2,style: .continuous)
-                        .fill(.clear)
-                }
-            }
-            .padding(.horizontal, 4)
-            .frame(height: 2)
+			RoundedRectangle(cornerRadius: 2, style: .continuous)
+				.fill(currentItem == item ? .blue : .clear)
+				.matchedGeometryEffect(id: "AnimationTab", in: animation, isSource: currentItem == item)
+				.padding(.horizontal, 4)
+				.frame(height: 2)
         }
         .contentShape(Rectangle())
         .onTapGesture {
@@ -85,6 +74,6 @@ struct TabsView: View {
 
 struct TabView_Previews: PreviewProvider {
     static var previews: some View {
-        TabsView(currentPokemon: .constant(.mock), animation: Namespace().wrappedValue)
+        TabsView(currentPokemon: .constant(.mock))
     }
 }

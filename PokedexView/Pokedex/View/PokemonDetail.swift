@@ -18,10 +18,8 @@ struct PokemonDetail: View {
 	@State private var isGestureActive: Bool = false
 
     static private let maxDragOffsetY = UIScreen.main.bounds.height * 0.35
-    @State private var startDragOffsetY = Self.maxDragOffsetY
+    @State private var lastDragOffsetY = Self.maxDragOffsetY
     @State private var currentDragOffsetY = Self.maxDragOffsetY
-
-    @Namespace var animation
 
 	func itemSize(in proxy: GeometryProxy) -> CGFloat {
 		proxy.size.width * 0.5
@@ -63,7 +61,7 @@ struct PokemonDetail: View {
                 .opacity(opacity)
                 .zIndex(2)
 
-                TabsView(currentPokemon: $currentPokemon, animation: animation)
+                TabsView(currentPokemon: $currentPokemon)
                     .padding()
                     .background {
                         Color.white
@@ -72,13 +70,9 @@ struct PokemonDetail: View {
                     }
                     .offset(y: currentDragOffsetY)
                     .padding(.horizontal, -Self.padding)
-                    .gesture(DragGesture(minimumDistance: 0)
+                    .gesture(DragGesture()
                         .onChanged { value in
-                            if value.location == value.startLocation {
-                                startDragOffsetY = currentDragOffsetY
-                            }
-
-                            let newOffset = startDragOffsetY + value.translation.height
+                            let newOffset = lastDragOffsetY + value.translation.height
                             currentDragOffsetY = max(0, newOffset)
                         }
                         .onEnded { value in
@@ -89,6 +83,8 @@ struct PokemonDetail: View {
                                     currentDragOffsetY = 0
                                 }
                             }
+
+                            lastDragOffsetY = currentDragOffsetY
                         }
                     )
                     .ignoresSafeArea(edges: .bottom)
@@ -181,7 +177,6 @@ struct PokemonDetail: View {
                 }
             }
     }
-
 }
 
 struct PokemonDetail_Previews: PreviewProvider {
