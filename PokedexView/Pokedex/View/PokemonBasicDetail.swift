@@ -69,7 +69,6 @@ struct PokemonBasicDetail: View {
                 }
 			}
 		}
-		.foregroundColor(.black)
 		.padding(.horizontal, 20)
     }
 
