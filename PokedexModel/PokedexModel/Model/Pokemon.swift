@@ -51,17 +51,57 @@ public struct Pokemon: Decodable, Hashable, Identifiable {
 			}
 			public let group: Group
 		}
+		public enum Gender: Hashable {
+			case male(Double)
+			case female(Double)
+			case genderless
+
+			public var rate: Double {
+				switch self {
+				case .male(let rate): return rate
+				case .female(let rate): return rate
+				case .genderless: return 1
+				}
+			}
+
+			public var image: String? {
+				switch self {
+				case .female: return "female_sign"
+				case .male: return "male_sign"
+				case .genderless: return nil
+				}
+			}
+		}
 
 		public let species: [Specie]
 		public let descriptions: [Description]
 		public let eggGroups: [EggGroup]
-		public let gender_rate: Int
+
+		let gender_rate: Int
+		public var genders: [Gender] {
+			guard gender_rate != -1 else { return [.genderless] }
+
+			var female: Gender?
+			let femaleRatio = Double(gender_rate) / 8
+			if femaleRatio > 0 {
+				female = .female(femaleRatio)
+			}
+
+			var male: Gender?
+			let maleRatio = 1 - femaleRatio
+			if maleRatio > 0 {
+				male = .male(maleRatio)
+			}
+
+			return [male, female].compactMap({ $0 })
+		}
 	}
 	
 	public let id: Int
 	public let name: String
 	public let height: Int
 	public let weight: Int
+	public let baseExperience: Int
 	public let sprite: URL?
 	public let types: [PokemonType]
 	public let aditionalInfo: AditionalInfo
@@ -73,7 +113,6 @@ public struct Pokemon: Decodable, Hashable, Identifiable {
 			.first?
 			.replacingOccurrences(of: name.uppercased(), with: name.capitalized)
 			.replacingOccurrences(of: "\n", with: " ")
-//			.replacingOccurrences(of: "  ", with: " ")
 	}
 
 	enum CodingKeys: CodingKey {
@@ -81,16 +120,18 @@ public struct Pokemon: Decodable, Hashable, Identifiable {
 		case name
 		case height
 		case weight
+		case baseExperience
 		case sprites
 		case types
 		case aditionalInfo
 	}
 
-	init(id: Int, name: String, height: Int, weight: Int, sprite: URL? = nil, types: [PokemonType], aditionalInfo: AditionalInfo) {
+	init(id: Int, name: String, height: Int, weight: Int, baseExperience: Int, sprite: URL? = nil, types: [PokemonType], aditionalInfo: AditionalInfo) {
 		self.id = id
 		self.name = name
 		self.height = height
 		self.weight = weight
+		self.baseExperience = baseExperience
 		self.sprite = sprite
 		self.types = types
 		self.aditionalInfo = aditionalInfo
@@ -102,6 +143,7 @@ public struct Pokemon: Decodable, Hashable, Identifiable {
 		self.name = try container.decode(String.self, forKey: .name)
 		self.height = try container.decode(Int.self, forKey: .height)
 		self.weight = try container.decode(Int.self, forKey: .weight)
+		self.baseExperience = try container.decode(Int.self, forKey: .baseExperience)
 
 		let spritesData = try container.decode([Sprite].self, forKey: .sprites).first!.sprites.data(using: .utf8)!
 		let sprites = try? JSONDecoder().decode(_Sprite.self, from: spritesData)
@@ -128,6 +170,7 @@ public extension Pokemon {
 			name: "bulbasaur",
 			height: 7,
 			weight: 69,
+			baseExperience: 64,
 			sprite: URL(string: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png")!,
 			types: [PokemonType(
 				id: 12,
@@ -160,6 +203,7 @@ public extension Pokemon {
 			name: "charmander",
 			height: 6,
 			weight: 85,
+			baseExperience: 62,
 			sprite: URL(string: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/4.png")!,
 			types: [PokemonType(
 				id: 10,
@@ -188,6 +232,7 @@ public extension Pokemon {
 			name: "squirtle",
 			height: 5,
 			weight: 90,
+			baseExperience: 63,
 			sprite: URL(string: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/7.png")!,
 			types: [PokemonType(
 				id: 11,
@@ -216,6 +261,7 @@ public extension Pokemon {
 			name: "pikachu",
 			height: 4,
 			weight: 60,
+			baseExperience: 112,
 			sprite: URL(string: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png")!,
 			types: [.mock],
 			aditionalInfo: Pokemon.AditionalInfo(

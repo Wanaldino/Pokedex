@@ -13,6 +13,10 @@ extension Color {
 		case blue = "Azul"
 		case yellow = "Amarillo"
 		case green = "Verde"
+
+		case male = "Male"
+		case female = "Female"
+		case genderless = "Genderless"
 	}
 
 	init(_ color: Color) {

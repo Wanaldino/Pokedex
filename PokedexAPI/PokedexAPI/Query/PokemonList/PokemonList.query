@@ -4,6 +4,7 @@
 	name
 	height
     weight
+    baseExperience: base_experience
 	sprites: pokemon_v2_pokemonsprites {
 	  sprites
 	}

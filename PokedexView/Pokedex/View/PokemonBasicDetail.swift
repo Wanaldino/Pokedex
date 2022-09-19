@@ -54,19 +54,32 @@ struct PokemonBasicDetail: View {
                             .font(.headline)
                             .fontWeight(.bold)
                             .foregroundColor(Color.gray)
-                        Text("\(pokemon.aditionalInfo.gender_rate)")
+                        GenderView()
                         Text("Egg group")
                             .font(.headline)
                             .fontWeight(.bold)
                             .foregroundColor(Color.gray)
                         Text("\(pokemon.aditionalInfo.eggGroups.compactMap { $0.group.names.compactMap { $0.name }.first }.first ?? "")")
-                        Text("Egg cycle")
-                            .font(.headline)
-                            .fontWeight(.bold)
-                            .foregroundColor(Color.gray)
-                        Text("\(pokemon.aditionalInfo.eggGroups.compactMap { $0.group.names.compactMap { $0.name }.first }.last ?? "")")
                     }
                 }
+
+				VStack(alignment: .leading) {
+					Text("Trainign")
+						.font(.headline)
+						.fontWeight(.bold)
+						.padding(.top)
+						.padding(.bottom)
+
+					let maxWidth = proxy.size.width / 3
+					let columns = [GridItem(.flexible(minimum: 0, maximum: maxWidth)), GridItem()]
+					LazyVGrid(columns: columns, alignment: .leading, spacing: 10) {
+						Text("Base EXP")
+							.font(.headline)
+							.fontWeight(.bold)
+							.foregroundColor(Color.gray)
+						Text(pokemon.baseExperience.description)
+					}
+				}
 			}
 		}
 		.padding(.horizontal, 20)
@@ -80,6 +93,15 @@ struct PokemonBasicDetail: View {
                 .fontWeight(.bold)
                 .foregroundColor(Color.gray)
 			Text(description)
+		}
+	}
+
+	@ViewBuilder
+	func GenderView() -> some View {
+		HStack {
+			ForEach(pokemon.aditionalInfo.genders, id: \.self) { gender in
+				GenderText(gender: gender)
+			}
 		}
 	}
 }
