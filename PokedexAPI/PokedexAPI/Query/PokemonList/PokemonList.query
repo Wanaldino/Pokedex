@@ -30,5 +30,14 @@
       }
       gender_rate
     }
+    stats: pokemon_v2_pokemonstats {
+      value: base_stat
+      info: pokemon_v2_stat {
+        id
+        name: pokemon_v2_statnames(where: {language_id: {_eq: 9}}) {
+          name
+        }
+      }
+    }
   }
 }
