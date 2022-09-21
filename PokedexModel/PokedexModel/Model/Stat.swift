@@ -8,8 +8,13 @@
 import Foundation
 
 extension Pokemon {
-	public struct Stat: Decodable {
-		let value: Int
+	public struct Stat: Decodable, Identifiable {
+		public static let maxValue = 255
+
+		public var id: Int { info.id }
+		public let value: Int
+		public var name: String { info.name.replacingOccurrences(of: "Special", with: "Sp.") }
+		
 		let info: Info
 
 		init(value: Int, info: Pokemon.Stat.Info) {

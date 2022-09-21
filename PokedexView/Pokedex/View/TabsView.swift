@@ -9,7 +9,7 @@ import SwiftUI
 import PokedexModel
 
 struct TabsView: View {
-    @Binding var currentPokemon: Pokemon
+    @Binding var pokemon: Pokemon
 
 	@State private var currentItem: String = "About"
 	let items = [
@@ -37,9 +37,9 @@ struct TabsView: View {
                 .padding(.vertical, 16)
 
 				TabView(selection: $currentItem) {
-					PokemonBasicDetail(pokemon: currentPokemon)
+					PokemonBasicDetail(pokemon: pokemon)
 						.tag(items[0])
-					Color.red
+					PokemonStats(pokemon: $pokemon)
 						.tag(items[1])
 					Color.black
 						.tag(items[2])
@@ -73,6 +73,6 @@ struct TabsView: View {
 
 struct TabView_Previews: PreviewProvider {
     static var previews: some View {
-        TabsView(currentPokemon: .constant(.mock))
+        TabsView(pokemon: .constant(.mock))
     }
 }

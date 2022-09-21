@@ -61,7 +61,7 @@ struct PokemonDetail: View {
                 .opacity(opacity)
                 .zIndex(2)
 
-                TabsView(currentPokemon: $currentPokemon)
+                TabsView(pokemon: $currentPokemon)
                     .padding()
                     .background {
                         Color.white
