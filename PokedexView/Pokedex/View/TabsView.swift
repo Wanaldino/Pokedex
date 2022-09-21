@@ -14,7 +14,7 @@ struct TabsView: View {
 	@State private var currentItem: String = "About"
 	let items = [
 		"About",
-		"Base stats",
+		"Stats",
 		"Evolution",
 		"Moves"
 	]
@@ -25,11 +25,11 @@ struct TabsView: View {
 		GeometryReader { proxy in
 			VStack {
 				ScrollView(.horizontal, showsIndicators: false) {
-					HStack {
+					HStack(spacing: 0) {
 						ForEach(items) { item in
 							tabView(item: item)
-                                .padding(.horizontal, 5)
 						}
+						.font(.medium(size: 18))
                     }
 					.padding(.horizontal)
                     .frame(minWidth: proxy.size.width, alignment: .center)
@@ -55,7 +55,6 @@ struct TabsView: View {
     func tabView(item: String) -> some View {
         VStack(spacing: 8) {
             Text(item)
-                .fontWeight(.semibold)
                 .foregroundColor(currentItem == item ? .black : .gray)
                 .lineLimit(1)
 

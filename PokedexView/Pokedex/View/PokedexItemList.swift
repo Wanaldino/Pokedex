@@ -19,8 +19,7 @@ struct PokedexItemList: View {
 				HStack {
 					VStack(alignment: .leading, spacing: 8) {
 						Text(pokemon.name.capitalized)
-							.font(.headline)
-							.fontWeight(.bold)
+							.font(.bold())
 						ForEach(pokemon.types, id: \.id) { type in
 							TypeChip(type: type)
 						}

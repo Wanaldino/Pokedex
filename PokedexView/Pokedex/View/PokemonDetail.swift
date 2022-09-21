@@ -42,7 +42,7 @@ struct PokemonDetail: View {
                     .ignoresSafeArea(.all)
 
                 VStack(spacing: 8) {
-                    VStack {
+                    VStack(spacing: 0) {
                         InfoView()
                         ChipsView()
                     }
@@ -99,10 +99,10 @@ struct PokemonDetail: View {
     private func InfoView() -> some View {
         HStack {
             Text(currentPokemon.name.capitalized)
-                .font(.title)
-                .fontWeight(.semibold)
+                .font(.bold())
             Spacer()
             Text(String(format: "#%03i", currentPokemon.id))
+                .font(.medium())
         }
         .foregroundColor(.white)
     }
@@ -115,6 +115,7 @@ struct PokemonDetail: View {
             }
             Spacer()
             Text(currentPokemon.aditionalInfo.species.first!.name)
+                .font(.medium())
         }
         .foregroundColor(.white)
     }

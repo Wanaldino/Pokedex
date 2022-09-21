@@ -12,6 +12,7 @@ struct TypeChip: View {
 	let type: PokemonType
     var body: some View {
 		Text(type.name.capitalized)
+			.font(.medium())
 			.padding(.horizontal, 10)
 			.padding(.vertical, 4)
 			.background(

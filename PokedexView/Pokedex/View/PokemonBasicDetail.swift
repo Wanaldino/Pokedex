@@ -16,6 +16,7 @@ struct PokemonBasicDetail: View {
 			VStack(spacing: 16) {
 				if let description = pokemon.description {
 					Text(description)
+						.font(.book(size: 16))
 				}
 
                 let padding = 16.0
@@ -43,41 +44,37 @@ struct PokemonBasicDetail: View {
 
                 VStack(alignment: .leading) {
                     Text("Breeding")
-                        .font(.headline)
-                        .fontWeight(.bold)
+                        .font(.bold(size: 24))
                         .padding(.top)
-                        .padding(.bottom)
                     let maxWidth = proxy.size.width / 3
                     let columns = [GridItem(.flexible(minimum: 0, maximum: maxWidth)), GridItem()]
                     LazyVGrid(columns: columns, alignment: .leading, spacing: 10) {
                         Text("Gender")
-                            .font(.headline)
-                            .fontWeight(.bold)
+                            .font(.bold(size: 18))
                             .foregroundColor(Color.gray)
                         GenderView()
+							.font(.book(size: 16))
                         Text("Egg group")
-                            .font(.headline)
-                            .fontWeight(.bold)
+							.font(.bold(size: 18))
                             .foregroundColor(Color.gray)
                         Text("\(pokemon.aditionalInfo.eggGroups.compactMap { $0.group.names.compactMap { $0.name }.first }.first ?? "")")
+							.font(.book(size: 16))
                     }
                 }
 
 				VStack(alignment: .leading) {
 					Text("Trainign")
-						.font(.headline)
-						.fontWeight(.bold)
+						.font(.bold(size: 24))
 						.padding(.top)
-						.padding(.bottom)
 
 					let maxWidth = proxy.size.width / 3
 					let columns = [GridItem(.flexible(minimum: 0, maximum: maxWidth)), GridItem()]
 					LazyVGrid(columns: columns, alignment: .leading, spacing: 10) {
 						Text("Base EXP")
-							.font(.headline)
-							.fontWeight(.bold)
+							.font(.bold(size: 18))
 							.foregroundColor(Color.gray)
 						Text(pokemon.baseExperience.description)
+							.font(.book(size: 16))
 					}
 				}
 			}
@@ -89,10 +86,10 @@ struct PokemonBasicDetail: View {
 	func VerticalDescription(title: String, description: String) -> some View {
 		VStack(alignment: .leading) {
 			Text(title)
-                .font(.headline)
-                .fontWeight(.bold)
+				.font(.bold(size: 18))
                 .foregroundColor(Color.gray)
 			Text(description)
+				.font(.book(size: 16))
 		}
 	}
 

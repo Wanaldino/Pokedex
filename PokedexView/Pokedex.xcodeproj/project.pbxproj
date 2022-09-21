@@ -61,6 +61,16 @@
 		F0EA6F9328A3FDA300903022 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0C3283828A2BAF10061E695 /* Colors.xcassets */; };
 		F0EA6F9428A3FDA300903022 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F054741A28A249F300818FDB /* Preview Assets.xcassets */; };
 		F0EA6F9528A3FDA300903022 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F054741628A249F300818FDB /* Assets.xcassets */; };
+		F0F9AF4428D8C4FF00B0DEDB /* CircularStd-Book.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F0F9AF4028D8C4FF00B0DEDB /* CircularStd-Book.ttf */; };
+		F0F9AF4528D8C4FF00B0DEDB /* CircularStd-Book.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F0F9AF4028D8C4FF00B0DEDB /* CircularStd-Book.ttf */; };
+		F0F9AF4628D8C4FF00B0DEDB /* CircularStd-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F0F9AF4128D8C4FF00B0DEDB /* CircularStd-Black.ttf */; };
+		F0F9AF4728D8C4FF00B0DEDB /* CircularStd-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F0F9AF4128D8C4FF00B0DEDB /* CircularStd-Black.ttf */; };
+		F0F9AF4828D8C4FF00B0DEDB /* CircularStd-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F0F9AF4228D8C4FF00B0DEDB /* CircularStd-Medium.ttf */; };
+		F0F9AF4928D8C4FF00B0DEDB /* CircularStd-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F0F9AF4228D8C4FF00B0DEDB /* CircularStd-Medium.ttf */; };
+		F0F9AF4A28D8C4FF00B0DEDB /* CircularStd-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F0F9AF4328D8C4FF00B0DEDB /* CircularStd-Bold.ttf */; };
+		F0F9AF4B28D8C4FF00B0DEDB /* CircularStd-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F0F9AF4328D8C4FF00B0DEDB /* CircularStd-Bold.ttf */; };
+		F0F9AF4E28D8C98700B0DEDB /* Font+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F9AF4D28D8C98700B0DEDB /* Font+Ext.swift */; };
+		F0F9AF4F28D8C98700B0DEDB /* Font+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F9AF4D28D8C98700B0DEDB /* Font+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -124,6 +134,13 @@
 		F0EA024828C209A900E627BA /* AnnulusShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnulusShape.swift; sourceTree = "<group>"; };
 		F0EA024B28C209DF00E627BA /* CGRect + center.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGRect + center.swift"; sourceTree = "<group>"; };
 		F0EA6F9A28A3FDA300903022 /* Pokedex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pokedex.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0EF3D7328DB24B1002C28CA /* Pokedex-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Pokedex-Info.plist"; sourceTree = "<group>"; };
+		F0F9AF4028D8C4FF00B0DEDB /* CircularStd-Book.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CircularStd-Book.ttf"; sourceTree = "<group>"; };
+		F0F9AF4128D8C4FF00B0DEDB /* CircularStd-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CircularStd-Black.ttf"; sourceTree = "<group>"; };
+		F0F9AF4228D8C4FF00B0DEDB /* CircularStd-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CircularStd-Medium.ttf"; sourceTree = "<group>"; };
+		F0F9AF4328D8C4FF00B0DEDB /* CircularStd-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CircularStd-Bold.ttf"; sourceTree = "<group>"; };
+		F0F9AF4C28D8C86E00B0DEDB /* PokedexDEV-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PokedexDEV-Info.plist"; sourceTree = "<group>"; };
+		F0F9AF4D28D8C98700B0DEDB /* Font+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,6 +227,7 @@
 				F020DB0F28C202700095214B /* Extensions */,
 				F020DB1628C207FE0095214B /* Shapes */,
 				F054740D28A249F100818FDB /* PokedexApp.swift */,
+				F0EF3D7528DB25E6002C28CA /* Info.plist */,
 				F054740F28A249F100818FDB /* Persistence.swift */,
 				F054741428A249F100818FDB /* ContentView.swift */,
 				F054741828A249F300818FDB /* Pokedex.entitlements */,
@@ -260,6 +278,7 @@
 		F0C3281228A25FDE0061E695 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				F0F9AF3F28D8C4E800B0DEDB /* Fonts */,
 				F054741628A249F300818FDB /* Assets.xcassets */,
 				F0C3283828A2BAF10061E695 /* Colors.xcassets */,
 				F0C3283A28A2C33C0061E695 /* Color+Ext.swift */,
@@ -273,6 +292,27 @@
 				F0C3284328A2E1410061E695 /* Pokedex.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F0EF3D7528DB25E6002C28CA /* Info.plist */ = {
+			isa = PBXGroup;
+			children = (
+				F0F9AF4C28D8C86E00B0DEDB /* PokedexDEV-Info.plist */,
+				F0EF3D7328DB24B1002C28CA /* Pokedex-Info.plist */,
+			);
+			path = Info.plist;
+			sourceTree = "<group>";
+		};
+		F0F9AF3F28D8C4E800B0DEDB /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				F0F9AF4128D8C4FF00B0DEDB /* CircularStd-Black.ttf */,
+				F0F9AF4328D8C4FF00B0DEDB /* CircularStd-Bold.ttf */,
+				F0F9AF4028D8C4FF00B0DEDB /* CircularStd-Book.ttf */,
+				F0F9AF4228D8C4FF00B0DEDB /* CircularStd-Medium.ttf */,
+				F0F9AF4D28D8C98700B0DEDB /* Font+Ext.swift */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -359,9 +399,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0F9AF4928D8C4FF00B0DEDB /* CircularStd-Medium.ttf in Resources */,
+				F0F9AF4B28D8C4FF00B0DEDB /* CircularStd-Bold.ttf in Resources */,
+				F0F9AF4528D8C4FF00B0DEDB /* CircularStd-Book.ttf in Resources */,
 				F0C3283928A2BAF10061E695 /* Colors.xcassets in Resources */,
 				F054741B28A249F300818FDB /* Preview Assets.xcassets in Resources */,
 				F054741728A249F300818FDB /* Assets.xcassets in Resources */,
+				F0F9AF4728D8C4FF00B0DEDB /* CircularStd-Black.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,9 +413,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0F9AF4828D8C4FF00B0DEDB /* CircularStd-Medium.ttf in Resources */,
+				F0F9AF4A28D8C4FF00B0DEDB /* CircularStd-Bold.ttf in Resources */,
+				F0F9AF4428D8C4FF00B0DEDB /* CircularStd-Book.ttf in Resources */,
 				F0EA6F9328A3FDA300903022 /* Colors.xcassets in Resources */,
 				F0EA6F9428A3FDA300903022 /* Preview Assets.xcassets in Resources */,
 				F0EA6F9528A3FDA300903022 /* Assets.xcassets in Resources */,
+				F0F9AF4628D8C4FF00B0DEDB /* CircularStd-Black.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -403,6 +451,7 @@
 				F054741028A249F100818FDB /* Persistence.swift in Sources */,
 				F0CB072128A51E1400126A07 /* PokemonBasicDetail.swift in Sources */,
 				8C0CC87428C72FC5001008B2 /* TabsView.swift in Sources */,
+				F0F9AF4F28D8C98700B0DEDB /* Font+Ext.swift in Sources */,
 				F0EA024C28C209DF00E627BA /* CGRect + center.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -432,6 +481,7 @@
 				F0EA6F8D28A3FDA300903022 /* Persistence.swift in Sources */,
 				F0CB072228A51E1400126A07 /* PokemonBasicDetail.swift in Sources */,
 				8C0CC87528C72FC5001008B2 /* TabsView.swift in Sources */,
+				F0F9AF4E28D8C98700B0DEDB /* Font+Ext.swift in Sources */,
 				F0EA024D28C209DF00E627BA /* CGRect + center.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -562,6 +612,7 @@
 					"$(inherited)",
 				);
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Pokedex/Info.plist/PokedexDEV-Info.plist";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -600,6 +651,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Pokedex/Info.plist/PokedexDEV-Info.plist";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -642,6 +694,7 @@
 					"$(inherited)",
 				);
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Pokedex/Info.plist/Pokedex-Info.plist";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -681,6 +734,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Pokedex/Info.plist/Pokedex-Info.plist";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
