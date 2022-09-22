@@ -18,7 +18,7 @@ struct PokemonStats: View {
 			let columns = [GridItem(.flexible(minimum: 0, maximum: textWidth)), GridItem(.fixed(valueWidth)), GridItem()]
 			LazyVGrid(columns: columns, alignment: .leading, spacing: 10) {
 				ForEach(pokemon.stats) { stat in
-					Text(stat.name)
+					Text(stat.name.replacingOccurrences(of: "Special", with: "Sp."))
 						.font(.medium(size: 18))
 						.foregroundColor(Color.gray)
 					Text(stat.value.description)

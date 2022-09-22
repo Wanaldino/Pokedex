@@ -13,7 +13,7 @@ extension Pokemon {
 
 		public var id: Int { info.id }
 		public let value: Int
-		public var name: String { info.name.replacingOccurrences(of: "Special", with: "Sp.") }
+		public var name: String { info.name }
 		
 		let info: Info
 

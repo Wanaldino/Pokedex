@@ -14,14 +14,11 @@ public struct PokemonType: Decodable, Identifiable {
 
 	public let id: Int
 	public let name: String
+	public var type: _Type? { _Type(rawValue: name) }
 
 	public init(id: Int, name: String) {
 		self.id = id
 		self.name = name
-	}
-
-	public var type: _Type? {
-		_Type(rawValue: name)
 	}
 }
 
