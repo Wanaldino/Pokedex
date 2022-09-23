@@ -1,0 +1,1626 @@
+{
+  "data" : {
+    "effectivities" : [
+      {
+        "effectivity" : 100,
+        "defenerID" : 1,
+        "attackerID" : 1
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 2,
+        "attackerID" : 1
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 3,
+        "attackerID" : 1
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 4,
+        "attackerID" : 1
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 5,
+        "attackerID" : 1
+      },
+      {
+        "effectivity" : 50,
+        "defenerID" : 6,
+        "attackerID" : 1
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 7,
+        "attackerID" : 1
+      },
+      {
+        "effectivity" : 0,
+        "defenerID" : 8,
+        "attackerID" : 1
+      },
+      {
+        "effectivity" : 50,
+        "defenerID" : 9,
+        "attackerID" : 1
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 10,
+        "attackerID" : 1
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 11,
+        "attackerID" : 1
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 12,
+        "attackerID" : 1
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 13,
+        "attackerID" : 1
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 14,
+        "attackerID" : 1
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 15,
+        "attackerID" : 1
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 16,
+        "attackerID" : 1
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 17,
+        "attackerID" : 1
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 18,
+        "attackerID" : 1
+      },
+      {
+        "effectivity" : 200,
+        "defenerID" : 1,
+        "attackerID" : 2
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 2,
+        "attackerID" : 2
+      },
+      {
+        "effectivity" : 50,
+        "defenerID" : 3,
+        "attackerID" : 2
+      },
+      {
+        "effectivity" : 50,
+        "defenerID" : 4,
+        "attackerID" : 2
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 5,
+        "attackerID" : 2
+      },
+      {
+        "effectivity" : 200,
+        "defenerID" : 6,
+        "attackerID" : 2
+      },
+      {
+        "effectivity" : 50,
+        "defenerID" : 7,
+        "attackerID" : 2
+      },
+      {
+        "effectivity" : 0,
+        "defenerID" : 8,
+        "attackerID" : 2
+      },
+      {
+        "effectivity" : 200,
+        "defenerID" : 9,
+        "attackerID" : 2
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 10,
+        "attackerID" : 2
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 11,
+        "attackerID" : 2
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 12,
+        "attackerID" : 2
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 13,
+        "attackerID" : 2
+      },
+      {
+        "effectivity" : 50,
+        "defenerID" : 14,
+        "attackerID" : 2
+      },
+      {
+        "effectivity" : 200,
+        "defenerID" : 15,
+        "attackerID" : 2
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 16,
+        "attackerID" : 2
+      },
+      {
+        "effectivity" : 200,
+        "defenerID" : 17,
+        "attackerID" : 2
+      },
+      {
+        "effectivity" : 50,
+        "defenerID" : 18,
+        "attackerID" : 2
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 1,
+        "attackerID" : 3
+      },
+      {
+        "effectivity" : 200,
+        "defenerID" : 2,
+        "attackerID" : 3
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 3,
+        "attackerID" : 3
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 4,
+        "attackerID" : 3
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 5,
+        "attackerID" : 3
+      },
+      {
+        "effectivity" : 50,
+        "defenerID" : 6,
+        "attackerID" : 3
+      },
+      {
+        "effectivity" : 200,
+        "defenerID" : 7,
+        "attackerID" : 3
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 8,
+        "attackerID" : 3
+      },
+      {
+        "effectivity" : 50,
+        "defenerID" : 9,
+        "attackerID" : 3
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 10,
+        "attackerID" : 3
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 11,
+        "attackerID" : 3
+      },
+      {
+        "effectivity" : 200,
+        "defenerID" : 12,
+        "attackerID" : 3
+      },
+      {
+        "effectivity" : 50,
+        "defenerID" : 13,
+        "attackerID" : 3
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 14,
+        "attackerID" : 3
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 15,
+        "attackerID" : 3
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 16,
+        "attackerID" : 3
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 17,
+        "attackerID" : 3
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 18,
+        "attackerID" : 3
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 1,
+        "attackerID" : 4
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 2,
+        "attackerID" : 4
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 3,
+        "attackerID" : 4
+      },
+      {
+        "effectivity" : 50,
+        "defenerID" : 4,
+        "attackerID" : 4
+      },
+      {
+        "effectivity" : 50,
+        "defenerID" : 5,
+        "attackerID" : 4
+      },
+      {
+        "effectivity" : 50,
+        "defenerID" : 6,
+        "attackerID" : 4
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 7,
+        "attackerID" : 4
+      },
+      {
+        "effectivity" : 50,
+        "defenerID" : 8,
+        "attackerID" : 4
+      },
+      {
+        "effectivity" : 0,
+        "defenerID" : 9,
+        "attackerID" : 4
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 10,
+        "attackerID" : 4
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 11,
+        "attackerID" : 4
+      },
+      {
+        "effectivity" : 200,
+        "defenerID" : 12,
+        "attackerID" : 4
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 13,
+        "attackerID" : 4
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 14,
+        "attackerID" : 4
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 15,
+        "attackerID" : 4
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 16,
+        "attackerID" : 4
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 17,
+        "attackerID" : 4
+      },
+      {
+        "effectivity" : 200,
+        "defenerID" : 18,
+        "attackerID" : 4
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 1,
+        "attackerID" : 5
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 2,
+        "attackerID" : 5
+      },
+      {
+        "effectivity" : 0,
+        "defenerID" : 3,
+        "attackerID" : 5
+      },
+      {
+        "effectivity" : 200,
+        "defenerID" : 4,
+        "attackerID" : 5
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 5,
+        "attackerID" : 5
+      },
+      {
+        "effectivity" : 200,
+        "defenerID" : 6,
+        "attackerID" : 5
+      },
+      {
+        "effectivity" : 50,
+        "defenerID" : 7,
+        "attackerID" : 5
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 8,
+        "attackerID" : 5
+      },
+      {
+        "effectivity" : 200,
+        "defenerID" : 9,
+        "attackerID" : 5
+      },
+      {
+        "effectivity" : 200,
+        "defenerID" : 10,
+        "attackerID" : 5
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 11,
+        "attackerID" : 5
+      },
+      {
+        "effectivity" : 50,
+        "defenerID" : 12,
+        "attackerID" : 5
+      },
+      {
+        "effectivity" : 200,
+        "defenerID" : 13,
+        "attackerID" : 5
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 14,
+        "attackerID" : 5
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 15,
+        "attackerID" : 5
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 16,
+        "attackerID" : 5
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 17,
+        "attackerID" : 5
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 18,
+        "attackerID" : 5
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 1,
+        "attackerID" : 6
+      },
+      {
+        "effectivity" : 50,
+        "defenerID" : 2,
+        "attackerID" : 6
+      },
+      {
+        "effectivity" : 200,
+        "defenerID" : 3,
+        "attackerID" : 6
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 4,
+        "attackerID" : 6
+      },
+      {
+        "effectivity" : 50,
+        "defenerID" : 5,
+        "attackerID" : 6
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 6,
+        "attackerID" : 6
+      },
+      {
+        "effectivity" : 200,
+        "defenerID" : 7,
+        "attackerID" : 6
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 8,
+        "attackerID" : 6
+      },
+      {
+        "effectivity" : 50,
+        "defenerID" : 9,
+        "attackerID" : 6
+      },
+      {
+        "effectivity" : 200,
+        "defenerID" : 10,
+        "attackerID" : 6
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 11,
+        "attackerID" : 6
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 12,
+        "attackerID" : 6
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 13,
+        "attackerID" : 6
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 14,
+        "attackerID" : 6
+      },
+      {
+        "effectivity" : 200,
+        "defenerID" : 15,
+        "attackerID" : 6
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 16,
+        "attackerID" : 6
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 17,
+        "attackerID" : 6
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 18,
+        "attackerID" : 6
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 1,
+        "attackerID" : 7
+      },
+      {
+        "effectivity" : 50,
+        "defenerID" : 2,
+        "attackerID" : 7
+      },
+      {
+        "effectivity" : 50,
+        "defenerID" : 3,
+        "attackerID" : 7
+      },
+      {
+        "effectivity" : 50,
+        "defenerID" : 4,
+        "attackerID" : 7
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 5,
+        "attackerID" : 7
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 6,
+        "attackerID" : 7
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 7,
+        "attackerID" : 7
+      },
+      {
+        "effectivity" : 50,
+        "defenerID" : 8,
+        "attackerID" : 7
+      },
+      {
+        "effectivity" : 50,
+        "defenerID" : 9,
+        "attackerID" : 7
+      },
+      {
+        "effectivity" : 50,
+        "defenerID" : 10,
+        "attackerID" : 7
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 11,
+        "attackerID" : 7
+      },
+      {
+        "effectivity" : 200,
+        "defenerID" : 12,
+        "attackerID" : 7
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 13,
+        "attackerID" : 7
+      },
+      {
+        "effectivity" : 200,
+        "defenerID" : 14,
+        "attackerID" : 7
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 15,
+        "attackerID" : 7
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 16,
+        "attackerID" : 7
+      },
+      {
+        "effectivity" : 200,
+        "defenerID" : 17,
+        "attackerID" : 7
+      },
+      {
+        "effectivity" : 50,
+        "defenerID" : 18,
+        "attackerID" : 7
+      },
+      {
+        "effectivity" : 0,
+        "defenerID" : 1,
+        "attackerID" : 8
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 2,
+        "attackerID" : 8
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 3,
+        "attackerID" : 8
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 4,
+        "attackerID" : 8
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 5,
+        "attackerID" : 8
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 6,
+        "attackerID" : 8
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 7,
+        "attackerID" : 8
+      },
+      {
+        "effectivity" : 200,
+        "defenerID" : 8,
+        "attackerID" : 8
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 9,
+        "attackerID" : 8
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 10,
+        "attackerID" : 8
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 11,
+        "attackerID" : 8
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 12,
+        "attackerID" : 8
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 13,
+        "attackerID" : 8
+      },
+      {
+        "effectivity" : 200,
+        "defenerID" : 14,
+        "attackerID" : 8
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 15,
+        "attackerID" : 8
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 16,
+        "attackerID" : 8
+      },
+      {
+        "effectivity" : 50,
+        "defenerID" : 17,
+        "attackerID" : 8
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 18,
+        "attackerID" : 8
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 1,
+        "attackerID" : 9
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 2,
+        "attackerID" : 9
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 3,
+        "attackerID" : 9
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 4,
+        "attackerID" : 9
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 5,
+        "attackerID" : 9
+      },
+      {
+        "effectivity" : 200,
+        "defenerID" : 6,
+        "attackerID" : 9
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 7,
+        "attackerID" : 9
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 8,
+        "attackerID" : 9
+      },
+      {
+        "effectivity" : 50,
+        "defenerID" : 9,
+        "attackerID" : 9
+      },
+      {
+        "effectivity" : 50,
+        "defenerID" : 10,
+        "attackerID" : 9
+      },
+      {
+        "effectivity" : 50,
+        "defenerID" : 11,
+        "attackerID" : 9
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 12,
+        "attackerID" : 9
+      },
+      {
+        "effectivity" : 50,
+        "defenerID" : 13,
+        "attackerID" : 9
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 14,
+        "attackerID" : 9
+      },
+      {
+        "effectivity" : 200,
+        "defenerID" : 15,
+        "attackerID" : 9
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 16,
+        "attackerID" : 9
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 17,
+        "attackerID" : 9
+      },
+      {
+        "effectivity" : 200,
+        "defenerID" : 18,
+        "attackerID" : 9
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 1,
+        "attackerID" : 10
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 2,
+        "attackerID" : 10
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 3,
+        "attackerID" : 10
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 4,
+        "attackerID" : 10
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 5,
+        "attackerID" : 10
+      },
+      {
+        "effectivity" : 50,
+        "defenerID" : 6,
+        "attackerID" : 10
+      },
+      {
+        "effectivity" : 200,
+        "defenerID" : 7,
+        "attackerID" : 10
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 8,
+        "attackerID" : 10
+      },
+      {
+        "effectivity" : 200,
+        "defenerID" : 9,
+        "attackerID" : 10
+      },
+      {
+        "effectivity" : 50,
+        "defenerID" : 10,
+        "attackerID" : 10
+      },
+      {
+        "effectivity" : 50,
+        "defenerID" : 11,
+        "attackerID" : 10
+      },
+      {
+        "effectivity" : 200,
+        "defenerID" : 12,
+        "attackerID" : 10
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 13,
+        "attackerID" : 10
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 14,
+        "attackerID" : 10
+      },
+      {
+        "effectivity" : 200,
+        "defenerID" : 15,
+        "attackerID" : 10
+      },
+      {
+        "effectivity" : 50,
+        "defenerID" : 16,
+        "attackerID" : 10
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 17,
+        "attackerID" : 10
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 18,
+        "attackerID" : 10
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 1,
+        "attackerID" : 11
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 2,
+        "attackerID" : 11
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 3,
+        "attackerID" : 11
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 4,
+        "attackerID" : 11
+      },
+      {
+        "effectivity" : 200,
+        "defenerID" : 5,
+        "attackerID" : 11
+      },
+      {
+        "effectivity" : 200,
+        "defenerID" : 6,
+        "attackerID" : 11
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 7,
+        "attackerID" : 11
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 8,
+        "attackerID" : 11
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 9,
+        "attackerID" : 11
+      },
+      {
+        "effectivity" : 200,
+        "defenerID" : 10,
+        "attackerID" : 11
+      },
+      {
+        "effectivity" : 50,
+        "defenerID" : 11,
+        "attackerID" : 11
+      },
+      {
+        "effectivity" : 50,
+        "defenerID" : 12,
+        "attackerID" : 11
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 13,
+        "attackerID" : 11
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 14,
+        "attackerID" : 11
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 15,
+        "attackerID" : 11
+      },
+      {
+        "effectivity" : 50,
+        "defenerID" : 16,
+        "attackerID" : 11
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 17,
+        "attackerID" : 11
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 18,
+        "attackerID" : 11
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 1,
+        "attackerID" : 12
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 2,
+        "attackerID" : 12
+      },
+      {
+        "effectivity" : 50,
+        "defenerID" : 3,
+        "attackerID" : 12
+      },
+      {
+        "effectivity" : 50,
+        "defenerID" : 4,
+        "attackerID" : 12
+      },
+      {
+        "effectivity" : 200,
+        "defenerID" : 5,
+        "attackerID" : 12
+      },
+      {
+        "effectivity" : 200,
+        "defenerID" : 6,
+        "attackerID" : 12
+      },
+      {
+        "effectivity" : 50,
+        "defenerID" : 7,
+        "attackerID" : 12
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 8,
+        "attackerID" : 12
+      },
+      {
+        "effectivity" : 50,
+        "defenerID" : 9,
+        "attackerID" : 12
+      },
+      {
+        "effectivity" : 50,
+        "defenerID" : 10,
+        "attackerID" : 12
+      },
+      {
+        "effectivity" : 200,
+        "defenerID" : 11,
+        "attackerID" : 12
+      },
+      {
+        "effectivity" : 50,
+        "defenerID" : 12,
+        "attackerID" : 12
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 13,
+        "attackerID" : 12
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 14,
+        "attackerID" : 12
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 15,
+        "attackerID" : 12
+      },
+      {
+        "effectivity" : 50,
+        "defenerID" : 16,
+        "attackerID" : 12
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 17,
+        "attackerID" : 12
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 18,
+        "attackerID" : 12
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 1,
+        "attackerID" : 13
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 2,
+        "attackerID" : 13
+      },
+      {
+        "effectivity" : 200,
+        "defenerID" : 3,
+        "attackerID" : 13
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 4,
+        "attackerID" : 13
+      },
+      {
+        "effectivity" : 0,
+        "defenerID" : 5,
+        "attackerID" : 13
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 6,
+        "attackerID" : 13
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 7,
+        "attackerID" : 13
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 8,
+        "attackerID" : 13
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 9,
+        "attackerID" : 13
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 10,
+        "attackerID" : 13
+      },
+      {
+        "effectivity" : 200,
+        "defenerID" : 11,
+        "attackerID" : 13
+      },
+      {
+        "effectivity" : 50,
+        "defenerID" : 12,
+        "attackerID" : 13
+      },
+      {
+        "effectivity" : 50,
+        "defenerID" : 13,
+        "attackerID" : 13
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 14,
+        "attackerID" : 13
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 15,
+        "attackerID" : 13
+      },
+      {
+        "effectivity" : 50,
+        "defenerID" : 16,
+        "attackerID" : 13
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 17,
+        "attackerID" : 13
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 18,
+        "attackerID" : 13
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 1,
+        "attackerID" : 14
+      },
+      {
+        "effectivity" : 200,
+        "defenerID" : 2,
+        "attackerID" : 14
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 3,
+        "attackerID" : 14
+      },
+      {
+        "effectivity" : 200,
+        "defenerID" : 4,
+        "attackerID" : 14
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 5,
+        "attackerID" : 14
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 6,
+        "attackerID" : 14
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 7,
+        "attackerID" : 14
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 8,
+        "attackerID" : 14
+      },
+      {
+        "effectivity" : 50,
+        "defenerID" : 9,
+        "attackerID" : 14
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 10,
+        "attackerID" : 14
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 11,
+        "attackerID" : 14
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 12,
+        "attackerID" : 14
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 13,
+        "attackerID" : 14
+      },
+      {
+        "effectivity" : 50,
+        "defenerID" : 14,
+        "attackerID" : 14
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 15,
+        "attackerID" : 14
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 16,
+        "attackerID" : 14
+      },
+      {
+        "effectivity" : 0,
+        "defenerID" : 17,
+        "attackerID" : 14
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 18,
+        "attackerID" : 14
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 1,
+        "attackerID" : 15
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 2,
+        "attackerID" : 15
+      },
+      {
+        "effectivity" : 200,
+        "defenerID" : 3,
+        "attackerID" : 15
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 4,
+        "attackerID" : 15
+      },
+      {
+        "effectivity" : 200,
+        "defenerID" : 5,
+        "attackerID" : 15
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 6,
+        "attackerID" : 15
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 7,
+        "attackerID" : 15
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 8,
+        "attackerID" : 15
+      },
+      {
+        "effectivity" : 50,
+        "defenerID" : 9,
+        "attackerID" : 15
+      },
+      {
+        "effectivity" : 50,
+        "defenerID" : 10,
+        "attackerID" : 15
+      },
+      {
+        "effectivity" : 50,
+        "defenerID" : 11,
+        "attackerID" : 15
+      },
+      {
+        "effectivity" : 200,
+        "defenerID" : 12,
+        "attackerID" : 15
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 13,
+        "attackerID" : 15
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 14,
+        "attackerID" : 15
+      },
+      {
+        "effectivity" : 50,
+        "defenerID" : 15,
+        "attackerID" : 15
+      },
+      {
+        "effectivity" : 200,
+        "defenerID" : 16,
+        "attackerID" : 15
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 17,
+        "attackerID" : 15
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 18,
+        "attackerID" : 15
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 1,
+        "attackerID" : 16
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 2,
+        "attackerID" : 16
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 3,
+        "attackerID" : 16
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 4,
+        "attackerID" : 16
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 5,
+        "attackerID" : 16
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 6,
+        "attackerID" : 16
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 7,
+        "attackerID" : 16
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 8,
+        "attackerID" : 16
+      },
+      {
+        "effectivity" : 50,
+        "defenerID" : 9,
+        "attackerID" : 16
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 10,
+        "attackerID" : 16
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 11,
+        "attackerID" : 16
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 12,
+        "attackerID" : 16
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 13,
+        "attackerID" : 16
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 14,
+        "attackerID" : 16
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 15,
+        "attackerID" : 16
+      },
+      {
+        "effectivity" : 200,
+        "defenerID" : 16,
+        "attackerID" : 16
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 17,
+        "attackerID" : 16
+      },
+      {
+        "effectivity" : 0,
+        "defenerID" : 18,
+        "attackerID" : 16
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 1,
+        "attackerID" : 17
+      },
+      {
+        "effectivity" : 50,
+        "defenerID" : 2,
+        "attackerID" : 17
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 3,
+        "attackerID" : 17
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 4,
+        "attackerID" : 17
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 5,
+        "attackerID" : 17
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 6,
+        "attackerID" : 17
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 7,
+        "attackerID" : 17
+      },
+      {
+        "effectivity" : 200,
+        "defenerID" : 8,
+        "attackerID" : 17
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 9,
+        "attackerID" : 17
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 10,
+        "attackerID" : 17
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 11,
+        "attackerID" : 17
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 12,
+        "attackerID" : 17
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 13,
+        "attackerID" : 17
+      },
+      {
+        "effectivity" : 200,
+        "defenerID" : 14,
+        "attackerID" : 17
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 15,
+        "attackerID" : 17
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 16,
+        "attackerID" : 17
+      },
+      {
+        "effectivity" : 50,
+        "defenerID" : 17,
+        "attackerID" : 17
+      },
+      {
+        "effectivity" : 50,
+        "defenerID" : 18,
+        "attackerID" : 17
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 1,
+        "attackerID" : 18
+      },
+      {
+        "effectivity" : 200,
+        "defenerID" : 2,
+        "attackerID" : 18
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 3,
+        "attackerID" : 18
+      },
+      {
+        "effectivity" : 50,
+        "defenerID" : 4,
+        "attackerID" : 18
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 5,
+        "attackerID" : 18
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 6,
+        "attackerID" : 18
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 7,
+        "attackerID" : 18
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 8,
+        "attackerID" : 18
+      },
+      {
+        "effectivity" : 50,
+        "defenerID" : 9,
+        "attackerID" : 18
+      },
+      {
+        "effectivity" : 50,
+        "defenerID" : 10,
+        "attackerID" : 18
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 11,
+        "attackerID" : 18
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 12,
+        "attackerID" : 18
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 13,
+        "attackerID" : 18
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 14,
+        "attackerID" : 18
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 15,
+        "attackerID" : 18
+      },
+      {
+        "effectivity" : 200,
+        "defenerID" : 16,
+        "attackerID" : 18
+      },
+      {
+        "effectivity" : 200,
+        "defenerID" : 17,
+        "attackerID" : 18
+      },
+      {
+        "effectivity" : 100,
+        "defenerID" : 18,
+        "attackerID" : 18
+      }
+    ]
+  }
+}

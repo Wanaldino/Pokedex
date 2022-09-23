@@ -19,7 +19,7 @@ struct TypeChip: View {
 				GeometryReader { proxy in
 					ZStack {
 						Color.white
-						TypeBackground(type: type)
+						type.color
 							.opacity(0.7)
 					}
 					.cornerRadius(proxy.size.height / 2)
@@ -32,7 +32,7 @@ struct TypeChip: View {
 struct TypeChip_Previews: PreviewProvider {
     static var previews: some View {
 		ZStack(alignment: .center) {
-			TypeBackground(type: .mock)
+			PokemonType.mock.color
 			TypeChip(type: .mock)
 		}
     }

@@ -1,0 +1,7 @@
+{
+  effectivities: pokemon_v2_typeefficacy {
+    attackerID: damage_type_id
+    defenerID: target_type_id
+    effectivity: damage_factor
+  }
+}

@@ -23,13 +23,13 @@ public class HTTPClient {
 			.request(url, method: .post, parameters: body, encoder: .json, headers: headers)
 			.responseString(completionHandler: { response in
 //				print("ℹ️", response)
-//				let url = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask).first?.appendingPathComponent(UUID().description)
-//
-//				let object = try! JSONSerialization.jsonObject(with: response.data!, options: [])
-//				let data = try! JSONSerialization.data(withJSONObject: object, options: [.prettyPrinted])
-//
-//				try! data.write(to: url!)
-//				print(url)
+				let url = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask).first?.appendingPathComponent(UUID().description)
+
+				let object = try! JSONSerialization.jsonObject(with: response.data!, options: [])
+				let data = try! JSONSerialization.data(withJSONObject: object, options: [.prettyPrinted])
+
+				try! data.write(to: url!)
+				print(url)
 			})
 			.serializingDecodable(Response<T.Response>.self)
 			.value

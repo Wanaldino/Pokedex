@@ -1,0 +1,6 @@
+{
+  types: pokemon_v2_type {
+    id
+    name
+  }
+}

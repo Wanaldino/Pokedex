@@ -38,7 +38,7 @@ struct PokemonDetail: View {
 	var body: some View {
         GeometryReader { proxy in
             ZStack(alignment: .top) {
-                TypeBackground(type: currentPokemon.types.first!)
+                currentPokemon.types.first!.color
                     .ignoresSafeArea(.all)
 
                 VStack(spacing: 8) {

@@ -14,7 +14,7 @@ struct PokedexItemList: View {
     var body: some View {
 		GeometryReader { proxy in
 			ZStack {
-				TypeBackground(type: pokemon.types.first!)
+				pokemon.types.first!.color
 
 				HStack {
 					VStack(alignment: .leading, spacing: 8) {

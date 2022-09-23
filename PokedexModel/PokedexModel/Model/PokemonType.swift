@@ -9,7 +9,7 @@ import Foundation
 
 public struct PokemonType: Decodable, Identifiable {
 	public enum _Type: String {
-		case normal, fire, water, grass, electric, ice, fighing, poison, ground, flying, psychic, bug, rock, ghost, dark, dragon, steel, fairy
+		case normal, fire, water, grass, electric, ice, fighting, poison, ground, flying, psychic, bug, rock, ghost, dark, dragon, steel, fairy
 	}
 
 	public let id: Int
