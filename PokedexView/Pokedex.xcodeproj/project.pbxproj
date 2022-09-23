@@ -67,6 +67,8 @@
 		F0EF3D9C28DC9E56002C28CA /* Effectivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0EF3D9A28DC9E56002C28CA /* Effectivity.swift */; };
 		F0EF3D9E28DCA894002C28CA /* PokemonType+color.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0EF3D9D28DCA894002C28CA /* PokemonType+color.swift */; };
 		F0EF3D9F28DCA894002C28CA /* PokemonType+color.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0EF3D9D28DCA894002C28CA /* PokemonType+color.swift */; };
+		F0EF3DA228DE01E6002C28CA /* ChipList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0EF3DA128DE01E6002C28CA /* ChipList.swift */; };
+		F0EF3DA328DE01E6002C28CA /* ChipList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0EF3DA128DE01E6002C28CA /* ChipList.swift */; };
 		F0F9AF4428D8C4FF00B0DEDB /* CircularStd-Book.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F0F9AF4028D8C4FF00B0DEDB /* CircularStd-Book.ttf */; };
 		F0F9AF4528D8C4FF00B0DEDB /* CircularStd-Book.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F0F9AF4028D8C4FF00B0DEDB /* CircularStd-Book.ttf */; };
 		F0F9AF4628D8C4FF00B0DEDB /* CircularStd-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F0F9AF4128D8C4FF00B0DEDB /* CircularStd-Black.ttf */; };
@@ -144,6 +146,7 @@
 		F0EF3D8128DC60B0002C28CA /* TypeChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeChart.swift; sourceTree = "<group>"; };
 		F0EF3D9A28DC9E56002C28CA /* Effectivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Effectivity.swift; sourceTree = "<group>"; };
 		F0EF3D9D28DCA894002C28CA /* PokemonType+color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PokemonType+color.swift"; sourceTree = "<group>"; };
+		F0EF3DA128DE01E6002C28CA /* ChipList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChipList.swift; sourceTree = "<group>"; };
 		F0F9AF4028D8C4FF00B0DEDB /* CircularStd-Book.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CircularStd-Book.ttf"; sourceTree = "<group>"; };
 		F0F9AF4128D8C4FF00B0DEDB /* CircularStd-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CircularStd-Black.ttf"; sourceTree = "<group>"; };
 		F0F9AF4228D8C4FF00B0DEDB /* CircularStd-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CircularStd-Medium.ttf"; sourceTree = "<group>"; };
@@ -237,6 +240,7 @@
 				F020DB0B28C0E8AF0095214B /* Screen */,
 				F020DB0F28C202700095214B /* Extensions */,
 				F020DB1628C207FE0095214B /* Shapes */,
+				F0EF3DA028DE00A0002C28CA /* Layout */,
 				F054740D28A249F100818FDB /* PokedexApp.swift */,
 				F0EF3D7528DB25E6002C28CA /* Info.plist */,
 				F054740F28A249F100818FDB /* Persistence.swift */,
@@ -313,6 +317,14 @@
 				F0EF3D7328DB24B1002C28CA /* Pokedex-Info.plist */,
 			);
 			path = Info.plist;
+			sourceTree = "<group>";
+		};
+		F0EF3DA028DE00A0002C28CA /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				F0EF3DA128DE01E6002C28CA /* ChipList.swift */,
+			);
+			path = Layout;
 			sourceTree = "<group>";
 		};
 		F0F9AF3F28D8C4E800B0DEDB /* Fonts */ = {
@@ -450,6 +462,7 @@
 				F0254B7828CB5DC1000CC334 /* String + Identifiable.swift in Sources */,
 				F0EF3D8328DC60B0002C28CA /* TypeChart.swift in Sources */,
 				F054742328A24A9000818FDB /* PokedexItemList.swift in Sources */,
+				F0EF3DA328DE01E6002C28CA /* ChipList.swift in Sources */,
 				F020DB0D28C0E8C60095214B /* Screen.swift in Sources */,
 				F0EA024928C209A900E627BA /* AnnulusShape.swift in Sources */,
 				F0C3283B28A2C33C0061E695 /* Color+Ext.swift in Sources */,
@@ -483,6 +496,7 @@
 				F0254B7728CB5D01000CC334 /* String + Identifiable.swift in Sources */,
 				F0EF3D8228DC60B0002C28CA /* TypeChart.swift in Sources */,
 				F0EA6F8428A3FDA300903022 /* PokedexItemList.swift in Sources */,
+				F0EF3DA228DE01E6002C28CA /* ChipList.swift in Sources */,
 				F020DB0E28C0E8C60095214B /* Screen.swift in Sources */,
 				F0EA024A28C209A900E627BA /* AnnulusShape.swift in Sources */,
 				F0EA6F8628A3FDA300903022 /* Color+Ext.swift in Sources */,
