@@ -38,8 +38,7 @@ struct PokemonDetail: View {
 	var body: some View {
         GeometryReader { proxy in
             ZStack(alignment: .top) {
-                currentPokemon.types.first!.color
-                    .ignoresSafeArea(.all)
+                currentPokemon.types.first!.color.ignoresSafeArea(.all)
 
                 VStack(spacing: 8) {
                     VStack(spacing: 0) {
@@ -70,23 +69,7 @@ struct PokemonDetail: View {
                     }
                     .offset(y: currentDragOffsetY)
                     .padding(.horizontal, -Self.padding)
-                    .gesture(DragGesture()
-                        .onChanged { value in
-                            let newOffset = lastDragOffsetY + value.translation.height
-                            currentDragOffsetY = max(0, newOffset)
-                        }
-                        .onEnded { value in
-                            withAnimation(.spring()) {
-                                if currentDragOffsetY > Self.maxDragOffsetY / 2 {
-                                    currentDragOffsetY = Self.maxDragOffsetY
-                                } else {
-                                    currentDragOffsetY = 0
-                                }
-                            }
-
-                            lastDragOffsetY = currentDragOffsetY
-                        }
-                    )
+                    .gesture(TabViewGesture())
                     .ignoresSafeArea(edges: .bottom)
             }
         }
@@ -155,12 +138,12 @@ struct PokemonDetail: View {
             }
             .content.offset(x: isGestureActive ? pagerOffset : -itemSize(in: proxy) * CGFloat(index))
             .contentShape(Rectangle())
-            .gesture(dragGesture(proxy: proxy))
+            .gesture(PagerGesture(proxy: proxy))
             .animation(Animation.easeIn, value: currentPokemon)
         }
     }
 
-    private func dragGesture(proxy: GeometryProxy) -> some Gesture {
+    private func PagerGesture(proxy: GeometryProxy) -> some Gesture {
         DragGesture()
             .onChanged { value in
                 isGestureActive = true
@@ -176,6 +159,25 @@ struct PokemonDetail: View {
                 withAnimation {
                     isGestureActive = false
                 }
+            }
+    }
+
+    func TabViewGesture() -> some Gesture {
+        DragGesture()
+            .onChanged { value in
+                let newOffset = lastDragOffsetY + value.translation.height
+                currentDragOffsetY = max(0, newOffset)
+            }
+            .onEnded { value in
+                withAnimation(.spring()) {
+                    if currentDragOffsetY > Self.maxDragOffsetY / 2 {
+                        currentDragOffsetY = Self.maxDragOffsetY
+                    } else {
+                        currentDragOffsetY = 0
+                    }
+                }
+
+                lastDragOffsetY = currentDragOffsetY
             }
     }
 }
