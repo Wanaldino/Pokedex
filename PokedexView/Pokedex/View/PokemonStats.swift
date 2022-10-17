@@ -34,10 +34,9 @@ struct PokemonStats: View {
 					}
 				}.padding(.bottom, 32)
 
+				Text("Type defenses")
+					.font(.bold(size: 24))
 				if let effectivities {
-					Text("Type defenses")
-						.font(.bold(size: 24))
-
 					ChipList {
 						ForEach(effectivities) { effectivity in
 							Effectivity(effectivity: effectivity)
@@ -50,6 +49,7 @@ struct PokemonStats: View {
 				}
 			}
 			.onChange(of: pokemon, perform: { newValue in
+				self.effectivities = []
 				retrieveEffecties()
 			})
 			.task {

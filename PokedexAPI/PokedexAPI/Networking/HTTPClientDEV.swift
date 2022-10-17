@@ -8,13 +8,17 @@
 import Foundation
 
 public class HTTPClient {
-	public init() {}
+	let requestDelay: Int
+	public init(requestDelay: Int = 0) {
+		self.requestDelay = requestDelay
+	}
 	struct Response<T: Decodable>: Decodable {
 		let data: T
 	}
 	public func request<T: Query>(query: T) async throws -> T.Response {
-		let data = try! Data(contentsOf: query.mockFile)
-		let value = try! JSONDecoder().decode(Response<T.Response>.self, from: data)
+		try await Task.sleep(until: .now.advanced(by: .seconds(requestDelay)), clock: .continuous)
+		let data = try Data(contentsOf: query.mockFile)
+		let value = try JSONDecoder().decode(Response<T.Response>.self, from: data)
 		return value.data
 	}
 }

@@ -22,7 +22,7 @@ actor TypeManager {
 
 	static let shared = TypeManager()
 
-	let client = HTTPClient()
+	let client = HTTPClient(requestDelay: 1)
 
 	var types: [PokemonType]?
 	var typeChart: [TypeEffectivity]?

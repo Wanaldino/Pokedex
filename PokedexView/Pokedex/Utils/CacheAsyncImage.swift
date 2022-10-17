@@ -43,10 +43,10 @@ private class ImageCache {
 
     static subscript(url: URL) -> Image? {
         get {
-            ImageCache.cache[url]
+            cache[url]
         }
         set {
-            ImageCache.cache[url] = newValue
+            cache[url] = newValue
         }
     }
 }
