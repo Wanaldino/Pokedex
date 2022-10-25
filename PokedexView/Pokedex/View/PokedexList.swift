@@ -49,8 +49,8 @@ struct PokedexList: View {
 			do {
 				let response = try await HTTPClient().request(query: PokemonList())
 				self.pokemons = response.pokemons
-			} catch (let error) {
-				print(error)
+			} catch (let cosa) {
+				print(cosa)
 			}
 		})
 		.navigationTitle("Pokedex")
